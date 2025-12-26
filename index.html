@@ -34,7 +34,7 @@
                         }
                     },
                     animation: {
-                        'scroll-up': 'scrollUp 60s linear infinite', /* Slowed down for readability */
+                        'scroll-up': 'scrollUp 60s linear infinite',
                         'fade-in': 'fadeIn 1s ease-in-out',
                     },
                     keyframes: {
@@ -87,9 +87,73 @@
         .slide.active {
             opacity: 1;
         }
+
+        /* Rainbow Loader Animations (Gemini Style) */
+        @keyframes rainbowSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Dots move from outer ring to absolute center */
+        @keyframes convergeToCenter {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            60% { opacity: 1; }
+            100% { transform: translateY(58px) scale(0.1); opacity: 0; }
+        }
+        /* Text explodes out from the center */
+        @keyframes textExplode {
+            0% { transform: scale(0.1); opacity: 0; letter-spacing: -0.2em; filter: blur(8px); }
+            60% { transform: scale(1.1); opacity: 1; letter-spacing: 0.15em; filter: blur(0px); }
+            100% { transform: scale(1); opacity: 1; letter-spacing: 0.25em; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Loading Screen (Gemini Style) -->
+    <div id="page-loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700 ease-out">
+        <div class="relative flex items-center justify-center w-32 h-32">
+            <!-- 7 Colored Dots Container -->
+            <!-- Spins for 2s, then dots collapse inwards -->
+            <div class="absolute inset-0 z-10" style="animation: rainbowSpin 2s linear infinite;">
+                <!-- Red -->
+                <div class="absolute w-full h-full rotate-0">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+                <!-- Orange -->
+                <div class="absolute w-full h-full rotate-[51deg]">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+                <!-- Yellow -->
+                <div class="absolute w-full h-full rotate-[102deg]">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+                <!-- Green -->
+                <div class="absolute w-full h-full rotate-[154deg]">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+                <!-- Blue -->
+                <div class="absolute w-full h-full rotate-[205deg]">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+                <!-- Indigo -->
+                <div class="absolute w-full h-full rotate-[257deg]">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-indigo-600 shadow-[0_0_10px_rgba(79,70,229,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+                <!-- Violet -->
+                <div class="absolute w-full h-full rotate-[308deg]">
+                    <div class="mx-auto w-3 h-3 rounded-full bg-violet-600 shadow-[0_0_10px_rgba(124,58,237,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
+                </div>
+            </div>
+            
+            <!-- Final Text (Explodes from center where dots converged) -->
+            <div class="absolute z-20 flex items-center justify-center opacity-0" 
+                 style="animation: textExplode 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 2.4s forwards;">
+                <h1 class="text-3xl md:text-4xl font-black font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-rose-500 drop-shadow-sm whitespace-nowrap">
+                    GMC BUNDI
+                </h1>
+            </div>
+        </div>
+    </div>
 
     <!-- Top Bar -->
     <div class="bg-brand-900 text-white py-1.5 text-xs md:text-sm border-b border-brand-800">
@@ -117,7 +181,7 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <!-- College Logo -->
             <div class="flex-shrink-0">
-                <img src="https://github.com/kanishk2007dev/gmcbundi-main-website/blob/main/ChatGPT%20Image%20Dec%2025,%202025,%2010_30_23%20PM.png?raw=true" 
+                <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/refs/heads/main/file_0000000000f472089c4f6c08ffcb8842.png" 
                      alt="GMC Bundi Logo" 
                      class="h-28 w-28 md:h-36 md:w-36 object-contain rounded-full drop-shadow-sm border border-slate-100 p-1 transition-transform duration-300 hover:scale-110">
             </div>
@@ -249,7 +313,7 @@
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="md:w-1/3 flex flex-col items-center text-center">
                             <div class="w-48 h-56 bg-slate-100 rounded-lg overflow-hidden border p-1 shadow-inner mb-4">
-                                <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/refs/heads/main/file_0000000000f472089c4f6c08ffcb8842.png" 
+                                <img src="https://raw.githubusercontent.com/kanishk2007dev/Kanishk-new-website-/refs/heads/main/Copy%20of%20IMG-20251209-WA0218.jpg" 
                                      alt="Principal" 
                                      class="w-full h-full object-cover rounded">
                             </div>
@@ -471,18 +535,18 @@
                             <tr>
                                 <td class="px-6 py-3 text-slate-500">College Name</td>
                                 <td class="px-6 py-3 font-medium">GMC Bundi</td>
-                                <td class="px-6 py-3 text-slate-500">Establishment LOP</td>
+                                <td class="px-6 py-3 text-slate-500">Establishment</td>
                                 <td class="px-6 py-3 font-medium">10 May 2023</td>
                             </tr>
                             <tr>
                                 <td class="px-6 py-3 text-slate-500">Principal</td>
-                                <td class="px-6 py-3 font-medium">Rajasthan</td>
+                                <td class="px-6 py-3 font-medium">Yes</td>
                                 <td class="px-6 py-3 text-slate-500">Phone/Mobile</td>
                                 <td class="px-6 py-3 font-medium">9829036076</td>
                             </tr>
                             <tr>
                                 <td class="px-6 py-3 text-slate-500">Hostel Facility</td>
-                                <td class="px-6 py-3 text-green-600 font-bold">Yes (75%)</td>
+                                <td class="px-6 py-3 text-green-600 font-bold">Yes</td>
                                 <td class="px-6 py-3 text-slate-500">Skill Lab</td>
                                 <td class="px-6 py-3 text-green-600 font-bold">Available</td>
                             </tr>
@@ -511,7 +575,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-3 mb-4 flex-wrap">
-                        <img src="https://github.com/kanishk2007dev/gmcbundi-main-website/blob/main/ChatGPT%20Image%20Dec%2025,%202025,%2010_30_23%20PM.png?raw=true" class="h-20 w-20 rounded-full border border-white/20 transition-transform duration-300 hover:scale-110" alt="Logo">
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/refs/heads/main/file_0000000000f472089c4f6c08ffcb8842.png" class="h-20 w-20 rounded-full border border-white/20 transition-transform duration-300 hover:scale-110" alt="Logo">
                          <div class="bg-white p-1 rounded h-10 flex items-center">
                             <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Digital_India_logo.svg" class="h-8 w-auto" alt="Digital India">
                         </div>
@@ -523,7 +587,14 @@
                 <div>
                     <h4 class="font-bold text-base mb-4 uppercase tracking-wider text-brand-gold">Contact & Map</h4>
                     <p class="text-sm text-brand-100 mb-2">3 Talab Gaon, Bundi, Rajasthan - 323001</p>
-                    <p class="text-sm text-brand-100 mb-2">Email: gmcbundi@gmail.com</p>
+                    
+                    <div class="mb-3 pt-2 border-t border-brand-800">
+                        <p class="text-sm text-brand-100"><strong class="text-white">Dr. Vinod Verma</strong> <span class="text-xs opacity-75">(Nodal Officer)</span></p>
+                        <p class="text-sm text-brand-100"><strong class="text-white">Mr. Keshav Tiwari</strong> <span class="text-xs opacity-75">(Programmer)</span></p>
+                    </div>
+
+                    <p class="text-sm text-brand-100 mb-1">Email: <a href="mailto:gmcbundi@gmail.com" class="hover:text-white">gmcbundi@gmail.com</a></p>
+                    <p class="text-sm text-brand-100 mb-2">Email: <a href="mailto:gmcbundi29@rajasthan.gov.in" class="hover:text-white">gmcbundi29@rajasthan.gov.in</a></p>
                     <p class="text-sm text-brand-100 mb-4">Phone: 9829036076</p>
                     
                     <!-- Google Map Embed -->
@@ -559,6 +630,18 @@
     </footer>
 
     <script>
+        // Loading Animation Logic
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            // Extended load time for full animation cycle (spin -> converge -> explode)
+            setTimeout(() => {
+                loader.classList.add('opacity-0');
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 700);
+            }, 3800);
+        });
+
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
