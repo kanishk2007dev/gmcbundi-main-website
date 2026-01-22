@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - GMC Bundi</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                        hindi: ['"Tiro Devanagari Hindi"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8', // Royal Blue
+                            800: '#1e40af',
+                            900: '#1e3a8a', // Deep Navy
+                            gold: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .active-tab {
+            border-bottom: 2px solid #d97706;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        .inactive-tab {
+            border-bottom: 2px solid transparent;
+            color: #64748b;
+        }
+        .inactive-tab:hover {
+            color: #1e3a8a;
+            border-bottom: 2px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-900 text-white py-1.5 text-xs md:text-sm border-b border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="../index.html" class="flex items-center hover:text-brand-gold transition cursor-pointer">
+                    <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> 
+                    Back to Home
+                </a>
+            </div>
+            <div class="flex space-x-3 items-center">
+                <span>Student Directory</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <!-- Logo -->
+                <img src="https://github.com/kanishk2007dev/gmcbundi-main-website/blob/main/ChatGPT%20Image%20Dec%2025,%202025,%2010_30_23%20PM.png?raw=true" 
+                     alt="GMC Bundi Logo" 
+                     class="h-20 w-20 md:h-24 md:w-24 object-contain rounded-full border border-slate-100 p-1 shadow-sm">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-brand-900 font-hindi">राजकीय मेडिकल कॉलेज, बूंदी</h2>
+                    <h1 class="text-lg md:text-xl font-serif font-bold text-slate-800 uppercase tracking-wide">Government Medical College, Bundi</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden min-h-[600px] flex flex-col">
+            <!-- Toolbar -->
+            <div class="p-6 border-b border-slate-200 bg-slate-50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <h2 class="text-2xl font-bold text-brand-900 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    Student Details
+                </h2>
+                
+                <!-- Search -->
+                <div class="relative w-full md:w-96">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <input type="text" id="searchInput" placeholder="Search by name, number..." 
+                           class="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-md leading-5 bg-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 sm:text-sm transition duration-150 ease-in-out">
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex border-b border-slate-200 px-6 overflow-x-auto">
+                <button onclick="switchTab('batch2025')" id="tab-batch2025" class="active-tab px-6 py-4 text-sm font-medium focus:outline-none transition whitespace-nowrap">
+                    Batch 2025 <span class="ml-2 bg-brand-100 text-brand-800 py-0.5 px-2 rounded-full text-xs" id="count-2025">0</span>
+                </button>
+                <button onclick="switchTab('batch2024')" id="tab-batch2024" class="inactive-tab px-6 py-4 text-sm font-medium focus:outline-none transition whitespace-nowrap">
+                    Batch 2024 <span class="ml-2 bg-slate-100 text-slate-600 py-0.5 px-2 rounded-full text-xs" id="count-2024">0</span>
+                </button>
+                <button onclick="switchTab('batch2023')" id="tab-batch2023" class="inactive-tab px-6 py-4 text-sm font-medium focus:outline-none transition whitespace-nowrap">
+                    Batch 2023 <span class="ml-2 bg-slate-100 text-slate-600 py-0.5 px-2 rounded-full text-xs" id="count-2023">0</span>
+                </button>
+            </div>
+
+            <!-- Table Container -->
+            <div class="flex-grow overflow-x-auto">
+                <table class="min-w-full divide-y divide-slate-200">
+                    <thead class="bg-slate-50" id="tableHead">
+                        <!-- Headers injected via JS -->
+                    </thead>
+                    <tbody class="bg-white divide-y divide-slate-200" id="tableBody">
+                        <!-- Content injected via JS -->
+                    </tbody>
+                </table>
+                <div id="noResults" class="hidden p-12 text-center text-slate-500">
+                    <p class="text-lg">No students found matching your search.</p>
+                </div>
+            </div>
+            
+            <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 text-xs text-slate-500 flex justify-between">
+                <span>Data extracted from official documents.</span>
+                <span>Total Records: <span id="total-count">0</span></span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-white py-6 border-t-4 border-brand-gold mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-brand-200">&copy; 2025 Government Medical College, Bundi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data Extraction
+        const batch2023Data = [
+            { name: "ABHISHEK AJMERA", phone: "7222021798" },
+            { name: "ADITYA MANDUSIYA", phone: "9602727885" },
+            { name: "ADITYA MAN HADA", phone: "9462933488" },
+            { name: "AJAY NAGAR", phone: "6377540641" },
+            { name: "AKSHAY SANKHLA", phone: "6376070348" },
+            { name: "AKSHIT CHANDWADA", phone: "9509228991" },
+            { name: "AMAN ANSARI", phone: "9509305917" },
+            { name: "AMIT SHARMA", phone: "8302823180" },
+            { name: "ANAGHA PARASHAR", phone: "8769843123" },
+            { name: "ANISHA RAHAMAN", phone: "9784285733" },
+            { name: "ANKIT YADAV", phone: "9256729149" },
+            { name: "ANUSHKA KHANDELWA", phone: "9511519292" },
+            { name: "ARAS KHAN", phone: "8302681473" },
+            { name: "ARPITA CHOUDHARY", phone: "7300395022" },
+            { name: "ARSHIN BAHAMNI", phone: "7340450511" },
+            { name: "ARTI YADAV", phone: "8829043041" },
+            { name: "BHARAT SUTHAR", phone: "8107212733" },
+            { name: "BHUMIKA MAHESHWAR", phone: "8529091909" },
+            { name: "CHIRAG", phone: "9728871646" },
+            { name: "DEEPAK DEWASI", phone: "26365176288" },
+            { name: "DEEPAK JINGONIA", phone: "7073449697" },
+            { name: "DEEPANSHI PUROHIT", phone: "8905744961" },
+            { name: "DEVANSH SINGH", phone: "9057177000" },
+            { name: "DEVESH CHOUDHARY", phone: "8690063602" },
+            { name: "DHARMENDRA JANGID", phone: "9511337679" },
+            { name: "DIVYA SHARMA", phone: "8852001823" },
+            { name: "EKANAND MEENA", phone: "9352720974" },
+            { name: "GARVIT SHARMA", phone: "8764361082" },
+            { name: "GUNJAN AGARWAL", phone: "8529283646" },
+            { name: "HARIOM VERMA", phone: "7976186521" },
+            { name: "HARSH", phone: "7027853563" },
+            { name: "HARSHIT AGRAWAL", phone: "9352682606" },
+            { name: "HIMANSHI MEENA", phone: "9352508780" },
+            { name: "HIMANSHU MEENA", phone: "9358430258" },
+            { name: "ISHITA", phone: "946043911055" },
+            { name: "JAYANTILAL NINAMA", phone: "8690246628" },
+            { name: "KANISHKA SHARMA", phone: "6350287919" },
+            { name: "KAPIL JAT", phone: "9461215952" },
+            { name: "KESHAV DODWARIYA", phone: "7014863900" },
+            { name: "KHUSHI BHANAWAT", phone: "8949577802" },
+            { name: "KOMAL AMETA", phone: "8619097062" },
+            { name: "KOMAL RATHORE", phone: "7878573649" },
+            { name: "KRISHAN KUMAR", phone: "8000921998" },
+            { name: "KULDEEP BAIRWA", phone: "9982237927" },
+            { name: "KUMARI HIMANSHI", phone: "8529527711" },
+            { name: "LAKSHYA GOYAL", phone: "8114459317" },
+            { name: "LALKISHAN BERA", phone: "9257363168" },
+            { name: "LIPAKSHI MEHRA", phone: "8003186547" },
+            { name: "LOKESH GURJAR", phone: "8233290392" },
+            { name: "MANISH MEENA", phone: "8302552028" },
+            { name: "MANISH VERMA", phone: "8690074475" },
+            { name: "MANISH YADAV", phone: "9116916704" },
+            { name: "MANOJ SAINI", phone: "9166449758" },
+            { name: "MEGHNA GURSAHANEY", phone: "9414234457" },
+            { name: "MEHVISH BANO", phone: "8829020781" },
+            { name: "MO. AKRAM SILAWAT", phone: "8302508060" },
+            { name: "MURLI DHAR YADAV", phone: "9785290518" },
+            { name: "NAMAN PAHARIA", phone: "9116835945" },
+            { name: "NEHA SAIN", phone: "8302540945" },
+            { name: "NIKITA BIJARNIA", phone: "9664289802" },
+            { name: "NITESH PRADHAN", phone: "9352676033" },
+            { name: "NOUSHEEN KHAN", phone: "8209371560" },
+            { name: "PADMA BISHNOI", phone: "9509363690" },
+            { name: "POOJA CHOUDHARY", phone: "9983200501" },
+            { name: "PRACHI SHARMA", phone: "8239058985" },
+            { name: "PRAFUL DHOBI", phone: "7413854015" },
+            { name: "PRAMOD DEWASI", phone: "9587600936" },
+            { name: "PRANJAL JAIN", phone: "9460951179" },
+            { name: "PRATYUSHA SINGH", phone: "8852892749" },
+            { name: "PRAVEEN PUROHIT", phone: "9928773500" },
+            { name: "PRIYA MALINDA", phone: "8302726957" },
+            { name: "RADHESHYAM VERMA", phone: "7727871333" },
+            { name: "RAJ GOSWAMI", phone: "7417792456" },
+            { name: "RAMBALWAN MEENA", phone: "9782499463" },
+            { name: "RITIK LABANA", phone: "8239859446" },
+            { name: "SAGAR SHARMA", phone: "7889746505" },
+            { name: "SARITA KANWAR", phone: "9256685338" },
+            { name: "SATISH KUMAR", phone: "6376028609" },
+            { name: "SAKSHAM MIRDHA", phone: "9829133273" },
+            { name: "SHEETI AGRAWAL", phone: "8209159945" },
+            { name: "SHREE KISHAN GAHLOT", phone: "9667454698" },
+            { name: "SHREYANSH MUNDHRA", phone: "8949538246" },
+            { name: "SIDDHARTH DEVAL", phone: "8118804421" },
+            { name: "SUKHVEER", phone: "7878948341" },
+            { name: "SUMAN DHAKER", phone: "7425851288" },
+            { name: "SURENDRA KHOKHAR", phone: "9828672360" },
+            { name: "TARUN KUMAR DHAKED", phone: "8955744842" },
+            { name: "TUSHAR SEN", phone: "7230832752" },
+            { name: "UDAY MAHESHWAR", phone: "9462061972" },
+            { name: "UPASANA MEENA", phone: "7728047992" },
+            { name: "UTKARSH SHUKLA", phone: "7852802743" },
+            { name: "VAIBHAV SINGH", phone: "6377613046" },
+            { name: "VANSH BAMANIYA", phone: "9549212629" },
+            { name: "VATSAL NAMA", phone: "8000557210" },
+            { name: "VIKASH YADAV", phone: "7073114581" },
+            { name: "VIKRAM SAINI", phone: "8890045853" },
+            { name: "VINIT CHOUDHARY", phone: "8302177147" },
+            { name: "VIRENDRA CHOUDHARY", phone: "9001501156" },
+            { name: "WAQAR AHMAD", phone: "9012447209" },
+            { name: "YOGITA MEENA", phone: "9079128249" }
+        ].map(s => ({...s, dist: 'N/A'})); 
+
+        const batch2024Data = [
+            { name: "AARYA SHARMA", dist: "Jaipur", phone: "8619398507" },
+            { name: "AARYAN SHARMA", dist: "Jaipur", phone: "9782531616" },
+            { name: "ABHAY SINGH", dist: "Bundi", phone: "7014671513" },
+            { name: "ABHISHEK TAILOR", dist: "Bhilwara", phone: "7627072461" },
+            { name: "ADIT GUPTA", dist: "Kota", phone: "9983754130" },
+            { name: "ADITI MANDUSIYA", dist: "Sikar", phone: "8529394689" },
+            { name: "ANKUR SHARMA", dist: "Churu", phone: "8955768961" },
+            { name: "ARYAN VASHISTHA", dist: "Jaipur", phone: "9079960515" },
+            { name: "ASHISH NINAMA", dist: "Banswara", phone: "8829811960" },
+            { name: "BHANWAR SINGH", dist: "Sikar", phone: "7737372679" },
+            { name: "BHARAT PATEL", dist: "Jodhpur", phone: "9521129712" },
+            { name: "BHARTI", dist: "Bharatpur", phone: "6367663033" },
+            { name: "BHAVYA DAMOR", dist: "Dungarpur", phone: "8619483185" },
+            { name: "BHAVYAVARDHAN SINGH", dist: "Jhalawar", phone: "7742098665" },
+            { name: "BHAWANA SHEKHAWAT", dist: "Nagaur", phone: "7357644089" },
+            { name: "DARSHAN SAHU", dist: "Udaipur", phone: "9783980478" },
+            { name: "DEEPAK MEENA", dist: "Sawai Madhopur", phone: "7851963575" },
+            { name: "DEEPAK VERMA", dist: "Alwar", phone: "9649711989" },
+            { name: "DIKSHA SHARMA", dist: "Jaipur", phone: "7742170089" },
+            { name: "DURGESH KUMAR DANGI", dist: "Jhalawar", phone: "6375661835" },
+            { name: "GARVIT KUMAR VERMA", dist: "Jaipur", phone: "8824402349" },
+            { name: "GAURAV SHARMA", dist: "Ajmer", phone: "9664160233" },
+            { name: "GUNGUN YADAV", dist: "Budaun", phone: "9548197797" },
+            { name: "GUNJAN SAINI", dist: "Kota", phone: "9414218008" },
+            { name: "HARDIKA JAIN", dist: "Kota", phone: "7023600440" },
+            { name: "HARSHIT GUPTA", dist: "Sawai Madhopur", phone: "6367330965" },
+            { name: "HIMANSHU", dist: "Kota", phone: "8949471040" },
+            { name: "HIMANSHU GURJAR", dist: "Jaipur", phone: "9929702828" },
+            { name: "ISHIKA SHARMA", dist: "Bharatpur", phone: "9509131673" },
+            { name: "JAHNVI JAIN", dist: "Tonk", phone: "8690145266" },
+            { name: "JITENDRA DANGI", dist: "Jhalawar", phone: "8619341167" },
+            { name: "KAVYA LODHI", dist: "Jaipur", phone: "8947810500" },
+            { name: "KEERTI", dist: "Neem ka Thana", phone: "9817300324" },
+            { name: "KHUSHI", dist: "Kotputli-Behror", phone: "7976894483" },
+            { name: "KIRTI MATHUR", dist: "Sikar", phone: "8696804773" },
+            { name: "KRISHAN SHARMA", dist: "Alwar", phone: "9257991352" },
+            { name: "LAVANYA RAJAN", dist: "Bundi", phone: "8290042569" },
+            { name: "LOMAS JANGID", dist: "Baran", phone: "-" },
+            { name: "MAHESH JORWAL", dist: "Baran", phone: "9468921032" },
+            { name: "MEENAL VERMA", dist: "Beawar", phone: "8107116666" },
+            { name: "MEGHA GUPTA", dist: "Alwar", phone: "8824126346" },
+            { name: "MOHD ALWISH GOURI", dist: "Bundi", phone: "8078636054" },
+            { name: "MOHD SAMEER TAK", dist: "Nagaur", phone: "7733053507" },
+            { name: "MUDITA MEHRA", dist: "Ajmer", phone: "9521009230" },
+            { name: "MUSKAN SEVDA", dist: "Jhunjhunu", phone: "8769379307" },
+            { name: "NAMAN KHANDELWAL", dist: "Jaipur", phone: "9672261777" },
+            { name: "NAVED QURESHI", dist: "Kota", phone: "7878583135" },
+            { name: "NEERAJ MEENA", dist: "Sawai Madhopur", phone: "7737460678" },
+            { name: "NIDHI DAMOR", dist: "Banswara", phone: "7727804353" },
+            { name: "NIKITA VERMA", dist: "Bundi", phone: "8824573375" },
+            { name: "NIKITA YADAV", dist: "Kota", phone: "8949496780" },
+            { name: "NIRMAL MALI", dist: "Bhilwara", phone: "8504899545" },
+            { name: "PARISHITA MINA", dist: "Jaipur", phone: "8233567803" },
+            { name: "PAWAN KUMAR", dist: "Churu", phone: "9352511106" },
+            { name: "POOJA CHOUDHARY", dist: "Jaipur", phone: "9887300101" },
+            { name: "POOJA MEENA", dist: "Nagaur", phone: "9256231700" },
+            { name: "PRADYUMAN SINGH", dist: "Kekri", phone: "9462649963" },
+            { name: "PRAVEEN JANI", dist: "Sanchore", phone: "8209993190" },
+            { name: "PRINCE BHASKAR", dist: "Sikar", phone: "9782326733" },
+            { name: "PRIYA CHANDAK", dist: "Baran", phone: "9166970607" },
+            { name: "PRIYAL PALIWAL", dist: "Jhalawar", phone: "9660850880" },
+            { name: "PRIYANKA GOTHWAL", dist: "Jaipur", phone: "9216946928" },
+            { name: "PRIYANKA LALAWAT", dist: "Dausa", phone: "6350368487" },
+            { name: "RAHUL CHITTORA", dist: "Bundi", phone: "8000323692" },
+            { name: "RIDDHIMA JANGID", dist: "Jaipur", phone: "6367477856" },
+            { name: "RIGVED PURI", dist: "Baran", phone: "7240758411" },
+            { name: "ROHIT", dist: "Bharatpur", phone: "8441079965" },
+            { name: "ROHIT KUMAR", dist: "Jaipur", phone: "8949507159" },
+            { name: "RUCHIKA KUMAWAT", dist: "Jaipur", phone: "8852904615" },
+            { name: "RUDRA PUROHIT", dist: "Shahpura", phone: "8094144010" },
+            { name: "SAIJAL TAK", dist: "Pratapgarh", phone: "8949131573" },
+            { name: "SAMARTH INANI", dist: "Bundi", phone: "8619238112" },
+            { name: "SARA JALORI", dist: "Kota", phone: "9352536559" },
+            { name: "SAURABH KUMAR MEENA", dist: "Dausa", phone: "9414618088" },
+            { name: "SHAIKH MOHAMMED ARIB", dist: "Chittorgarh", phone: "8905467427" },
+            { name: "SHIV KUMAR", dist: "Jaipur", phone: "8529956802" },
+            { name: "SHIV PRAKASH", dist: "Jodhpur", phone: "9772438229" },
+            { name: "SHIVANSHU UPADHYAY", dist: "Kota", phone: "8306426321" },
+            { name: "SHREYA SHENOY", dist: "Kota", phone: "9166627257" },
+            { name: "SNEHA MITTAL", dist: "Kota", phone: "8824101240" },
+            { name: "SONIA", dist: "Kotputli-Behror", phone: "6377566821" },
+            { name: "SUHANI TIWARI", dist: "Kota", phone: "8529502443" },
+            { name: "SURUCHI SHARMA", dist: "Jaipur", phone: "8233847574" },
+            { name: "SURYANSH MEENA", dist: "Kota", phone: "7014133661" },
+            { name: "TANYA SHARMA", dist: "Kota", phone: "8690701911" },
+            { name: "VASU SOMANI", dist: "Bundi", phone: "7627077809" },
+            { name: "VIKAS GARHWAL", dist: "Sikar", phone: "8529902146" },
+            { name: "VIKASH SHYORAN", dist: "Jaipur", phone: "7737068915" },
+            { name: "VISHAL SHARMA", dist: "Jaipur", phone: "8387929901" },
+            { name: "VIVEK MINA", dist: "Alwar", phone: "8854965740" },
+            { name: "YASH KASHYAP", dist: "Kota", phone: "9983677080" },
+            { name: "YASH TAMBIA", dist: "Bikaner", phone: "7300299369" },
+            { name: "YOGITA YADAV", dist: "Dausa", phone: "9549809228" }
+        ];
+
+        const batch2025Data = [
+            { name: "AAMNA GOURI", phone: "9649159922" },
+            { name: "AARAV PORWAL", phone: "6350206927" },
+            { name: "AARTI", phone: "7877656272" },
+            { name: "ABHIJEET MINA", phone: "8209780491" },
+            { name: "ADITYA JINDAL", phone: "8619890237" },
+            { name: "ADITYA VEER GURJAR", phone: "9216218939" },
+            { name: "AILICIA", phone: "8306165807" },
+            { name: "AJAY VERMA", phone: "8955389322" },
+            { name: "AKSHARA MEENA", phone: "8209141589" },
+            { name: "AKSHAT GUPTA", phone: "9352166359" },
+            { name: "AMAN", phone: "9414583284" },
+            { name: "ANUJ PURI", phone: "7372950833" },
+            { name: "ANURAG INDAULIYA", phone: "9414848950" },
+            { name: "ANUSHKA SHEKHAWAT", phone: "8890488331" },
+            { name: "ANVESH AGARWAL", phone: "8302409656" },
+            { name: "ATHARV PATIDAR", phone: "8005932390" },
+            { name: "BHAVISHKA PRAJAPATI", phone: "8955857759" },
+            { name: "BITTU BANSAL", phone: "8696560300" },
+            { name: "CHESHTA JAGENIA", phone: "6350698143" },
+            { name: "CHETAN YADAV", phone: "8306540700" },
+            { name: "DAKSH SHARMA", phone: "9358561376" },
+            { name: "DAKSH YOGI", phone: "9001430044" },
+            { name: "DHAPU", phone: "" },
+            { name: "DIVYA PALIWAL", phone: "7891425526" },
+            { name: "DURGESH CHARPOTA", phone: "9024197916" },
+            { name: "GARVIT JORWAL", phone: "9660817424" },
+            { name: "GAURI JEENGAR", phone: "8769032240" },
+            { name: "GAURI VARSHNEY", phone: "8619473378" },
+            { name: "GIRIJA SAINI", phone: "966425904" },
+            { name: "GUNJAN PANCHOLI", phone: "8852011980" },
+            { name: "HARSHIT SAINGER", phone: "7014474966" },
+            { name: "HARSHITA", phone: "8107020564" },
+            { name: "HARSHITA MORWAL", phone: "7300237368" },
+            { name: "HARSHVI MEENA", phone: "6377715002" },
+            { name: "HEMLATA DHAKAR", phone: "7851923654" },
+            { name: "HIMANSHU BASETHIA", phone: "8504035294" },
+            { name: "HITISHA KHINCHI", phone: "9001271147" },
+            { name: "IRFAN KHAN", phone: "9136854846" },
+            { name: "ISHIKA KHANDELWAL", phone: "7297027016" },
+            { name: "JAAHNVI SINGH", phone: "8764560309" },
+            { name: "JAHNAVI", phone: "8290211469" },
+            { name: "JAYKARAN GODARA", phone: "9610228552" },
+            { name: "KANISHK", phone: "8107702092" },
+            { name: "KANISHKA", phone: "7737040551" },
+            { name: "KHUSHBU KANWAR", phone: "7728060404" },
+            { name: "KISHOR YADAV", phone: "8209947071" },
+            { name: "KISMAT PRAJAPAT", phone: "8955535418" },
+            { name: "KRISHNA GAUTAM", phone: "7357816083" },
+            { name: "LAKSHIT SAMARIA", phone: "9784941864" },
+            { name: "MAHAVEER MEENA", phone: "8239922380" },
+            { name: "MAHESH MEENA", phone: "9887637144" },
+            { name: "MANASVI DUNGARWAL", phone: "8780622374" },
+            { name: "MANINDAR VERMA", phone: "7737864427" },
+            { name: "MANISH NAINIWAL", phone: "9694988061" },
+            { name: "MAYANK MEENA", phone: "8529102724" },
+            { name: "MOHAMMAD FARHAN RAZA", phone: "6375364423" },
+            { name: "MOHIT BENIWAL", phone: "9784920402" },
+            { name: "MOKSHAA", phone: "7300463894" },
+            { name: "MUSKAN", phone: "6375362942" },
+            { name: "MUSKAN SAINI", phone: "7297017957" },
+            { name: "NAVEEN KUMAR SHARMA", phone: "9024556525" },
+            { name: "NEELAM CHOUDHARY", phone: "8949849799" },
+            { name: "NITUL CHOUDHARY", phone: "7297851163" },
+            { name: "NUPUR CHOUDHARY", phone: "9664191495" },
+            { name: "PARTH MAHAWER", phone: "9983773787" },
+            { name: "PAYAL CHOUDHARY", phone: "9079682540" },
+            { name: "PIYUSH", phone: "9680607657" },
+            { name: "PRADEEP KUMAR DHAKAR", phone: "6367365605" },
+            { name: "PRAGYA MINA", phone: "7231039521" },
+            { name: "PRAKASH KUMAR", phone: "7600633191" },
+            { name: "PRATYAKSH JANGID", phone: "7375066921" },
+            { name: "PRIYANKA YADAV", phone: "6376754393" },
+            { name: "PULKIT JHALANI", phone: "9549755180" },
+            { name: "RAHUL", phone: "9829798984" },
+            { name: "RAJSHRI MEENA", phone: "8209864952" },
+            { name: "RENU CHOUDHARY", phone: "9251273008" },
+            { name: "RIGVEDA JANGID", phone: "7737003142" },
+            { name: "RINKU", phone: "6377425833" },
+            { name: "SAKSHEE MEENA", phone: "9799323645" },
+            { name: "SAKSHI SHARMA", phone: "8107812196" },
+            { name: "SAMIKSHA GUPTA", phone: "7850966366" },
+            { name: "SANIYA KHAN", phone: "8003002720" },
+            { name: "SANJAY CHAUHAN", phone: "7627043749" },
+            { name: "SANJAY PANCHOLI", phone: "7340414272" },
+            { name: "SARTHAK YADAV", phone: "9024040889" },
+            { name: "SHIVANG GOTHWAL", phone: "6376123488" },
+            { name: "SHIVANI MEHRA", phone: "9024644418" },
+            { name: "SHREENIDHI KHANDELWAL", phone: "8209160380" },
+            { name: "SHYAM SUNDAR SINGH KAVIA", phone: "7357408051" },
+            { name: "SURESH BHAMBHU", phone: "8529186909" },
+            { name: "SURESH KUMAR SAINI", phone: "7597432119" },
+            { name: "TANISHA CHOUDHARY", phone: "7014130319" },
+            { name: "TANIYA BHARDWAJ", phone: "9509743022" },
+            { name: "VANSHIKA GARG", phone: "6375010063" },
+            { name: "VANSHIKA LALWANI", phone: "6378423343" },
+            { name: "VASU MITTAL", phone: "8302472596" },
+            { name: "VEDANT KHAJJA", phone: "9521440290" },
+            { name: "VINDHYA KABRA", phone: "9828071696" },
+            { name: "YASH KUMAR CHOUBEY", phone: "6378735027" }
+        ];
+
+        // State
+        let currentTab = 'batch2025'; // default
+        let searchTerm = '';
+
+        // DOM Elements
+        const tableBody = document.getElementById('tableBody');
+        const tableHead = document.getElementById('tableHead');
+        const searchInput = document.getElementById('searchInput');
+        const count2023 = document.getElementById('count-2023');
+        const count2024 = document.getElementById('count-2024');
+        const count2025 = document.getElementById('count-2025');
+        const totalCount = document.getElementById('total-count');
+        const noResults = document.getElementById('noResults');
+
+        // Init Counts
+        count2023.innerText = batch2023Data.length;
+        count2024.innerText = batch2024Data.length;
+        count2025.innerText = batch2025Data.length;
+        totalCount.innerText = batch2023Data.length + batch2024Data.length + batch2025Data.length;
+
+        function renderTable() {
+            let data;
+            if (currentTab === 'batch2023') data = batch2023Data;
+            else if (currentTab === 'batch2024') data = batch2024Data;
+            else data = batch2025Data;
+            
+            // Update Headers based on Tab
+            if (currentTab === 'batch2025') {
+                tableHead.innerHTML = `
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider w-16">#</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Student Name</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Contact Number</th>
+                    </tr>
+                `;
+            } else {
+                tableHead.innerHTML = `
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider w-16">#</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Student Name</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Contact Number</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider hidden md:table-cell">District</th>
+                    </tr>
+                `;
+            }
+
+            // Filter
+            const filtered = data.filter(item => {
+                const term = searchTerm.toLowerCase();
+                const dist = item.dist ? item.dist.toLowerCase() : '';
+                const phone = item.phone ? item.phone.toString() : '';
+                
+                return (
+                    (item.name && item.name.toLowerCase().includes(term)) ||
+                    (phone && phone.includes(term)) ||
+                    (dist && dist.includes(term))
+                );
+            });
+
+            tableBody.innerHTML = '';
+
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                
+                filtered.forEach((item, index) => {
+                    const row = document.createElement('tr');
+                    row.className = index % 2 === 0 ? 'bg-white hover:bg-slate-50' : 'bg-slate-50 hover:bg-slate-100';
+                    
+                    // Helpers for Phone Links
+                    const formatPhone = (p) => {
+                        if (!p || p === '-') return '<span class="text-slate-400 italic text-xs">N/A</span>';
+                        const clean = p.toString().replace(/[^0-9]/g, '');
+                        return `<a href="tel:${clean}" class="text-brand-600 hover:underline font-mono text-sm">${p}</a>`;
+                    };
+
+                    if (currentTab === 'batch2025') {
+                        // Batch 2025 Row Structure (Simplified)
+                        row.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 font-mono align-top">${index + 1}</td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-8 w-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold text-xs border border-slate-300 mt-1">
+                                        ${item.name.charAt(0)}
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-bold text-brand-900 capitalize">${item.name.toLowerCase()}</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm align-top">
+                                ${formatPhone(item.phone)}
+                            </td>
+                        `;
+
+                    } else {
+                        // Old Batches Row Structure (With District)
+                        // District display (Desktop)
+                        let distDisplay = item.dist === 'N/A' || item.dist === '-'
+                            ? '<span class="text-xs text-slate-400">Not Listed</span>' 
+                            : `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-100 text-brand-800">${item.dist}</span>`;
+
+                        // District display (Mobile)
+                        let mobileDist = item.dist === 'N/A' || item.dist === '-' 
+                            ? '' 
+                            : `<div class="md:hidden mt-1 text-xs text-slate-500 flex items-center"><svg class="w-3 h-3 mr-1 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>${item.dist}</div>`;
+
+                        row.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 font-mono">
+                                ${index + 1}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-8 w-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold text-xs border border-slate-300">
+                                        ${item.name.charAt(0)}
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-bold text-brand-900 capitalize">${item.name.toLowerCase()}</div>
+                                        ${mobileDist}
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                ${formatPhone(item.phone)}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 hidden md:table-cell">
+                                ${distDisplay}
+                            </td>
+                        `;
+                    }
+                    tableBody.appendChild(row);
+                });
+            }
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Reset all tabs
+            ['batch2023', 'batch2024', 'batch2025'].forEach(t => {
+                const btn = document.getElementById('tab-' + t);
+                btn.className = 'inactive-tab px-6 py-4 text-sm font-medium focus:outline-none transition whitespace-nowrap';
+            });
+
+            // Set active
+            const activeBtn = document.getElementById('tab-' + tab);
+            activeBtn.className = 'active-tab px-6 py-4 text-sm font-medium focus:outline-none transition whitespace-nowrap';
+
+            renderTable();
+        }
+
+        // Search Listener
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderTable();
+        });
+
+        // Initial Render
+        renderTable();
+
+    </script>
+</body>
+</html>
