@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMSA Restructuring Feedback Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Font Families */
+        .font-hindi { font-family: 'Tiro Devanagari Hindi', serif; }
+        .font-serif { font-family: 'Merriweather', serif; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        /* Vibrant Animated Background Gradient */
+        .animated-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 12s ease infinite;
+            background-attachment: fixed;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Playful Floating Animation */
+        @keyframes float-random {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50px, 50px) rotate(90deg); }
+            50% { transform: translate(0px, 100px) rotate(180deg); }
+            75% { transform: translate(-50px, 50px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        .floating-item {
+            position: fixed;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.08; /* Subtle opacity so text is readable */
+            mix-blend-mode: overlay;
+        }
+
+        /* Entrance Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-enter {
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0; 
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-500 { animation-delay: 0.5s; }
+    </style>
+</head>
+<body class="animated-bg min-h-screen flex flex-col items-center relative overflow-x-hidden font-sans">
+
+    <!-- Background Elements will be injected here by Script -->
+
+    <!-- Static Watermark (Center) -->
+    <div class="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+        <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" 
+             alt="GMC Bundi Logo Watermark" 
+             class="w-3/4 max-w-3xl h-auto opacity-[0.03] object-contain">
+    </div>
+
+    <!-- Header Section -->
+    <header class="w-full bg-white/90 backdrop-blur-md shadow-sm py-4 mb-6 border-b border-white/50 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+            
+            <!-- Official College Header -->
+            <!-- Layout: Mobile (Wrap) / Desktop (No Wrap) -->
+            <div class="flex flex-wrap md:flex-nowrap items-center justify-between gap-y-4 gap-x-2 mb-6 animate-enter w-full py-2">
+                
+                <!-- Left: College Logo -->
+                <div class="flex-shrink-0 order-1 md:order-1">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/refs/heads/main/file_0000000000f472089c4f6c08ffcb8842.png" 
+                        alt="Government Medical College Bundi Logo" 
+                        class="w-20 h-20 md:w-32 md:h-32 object-contain drop-shadow-md hover:scale-105 transition-transform duration-300 rounded-full bg-white p-1">
+                </div>
+                
+                <!-- Right: Logos (Digital India | Emblem) -->
+                <!-- Mobile: Order 2 (Top Right) | Desktop: Order 3 (Far Right) -->
+                <div class="flex items-center justify-end gap-2 md:gap-4 flex-shrink-0 order-2 md:order-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Digital_India_logo.svg" 
+                         alt="Digital India" 
+                         class="h-8 md:h-14 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- Vertical Separator Line -->
+                    <div class="h-8 md:h-12 w-px bg-slate-300 block"></div>
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" 
+                         alt="Satyamev Jayate" 
+                         class="h-10 md:h-16 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <!-- Center: Text Details -->
+                <!-- Mobile: Order 3 (New Line) | Desktop: Order 2 (Middle) -->
+                <div class="text-center w-full md:w-auto md:flex-grow order-3 md:order-2 px-2 mt-2 md:mt-0">
+                    <h2 class="text-2xl md:text-4xl font-bold text-blue-800 font-hindi mb-1 leading-tight">राजकीय मेडिकल कॉलेज, बूंदी</h2>
+                    <h1 class="text-xl md:text-3xl font-bold text-slate-800 uppercase tracking-wide font-serif mb-1 leading-tight">GOVERNMENT MEDICAL COLLEGE, BUNDI</h1>
+                    <p class="text-sm md:text-lg text-slate-600 font-medium tracking-wide">Rajasthan University of Health Sciences (RUHS)</p>
+                </div>
+
+            </div>
+
+            <!-- Separator -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent mb-8 animate-enter delay-100 opacity-60"></div>
+
+            <!-- Organization Header -->
+            <div class="text-center mb-8 animate-enter delay-200 flex flex-col items-center">
+                <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" 
+                     alt="BMSA Logo" 
+                     class="w-28 h-28 mb-4 object-contain drop-shadow-md hover:scale-110 transition-transform duration-300 rounded-full bg-white p-2 border-2 border-blue-100">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-blue-800 mb-2 drop-shadow-sm uppercase tracking-wide">
+                    Bundi Medical Students Association
+                </h1>
+                <p class="text-lg text-blue-600 font-serif italic font-medium">
+                    "Voice for Medical Excellence"
+                </p>
+            </div>
+
+            <h2 class="animate-enter delay-300 text-xl md:text-2xl font-bold text-gray-800 text-center mb-6 bg-white/90 px-6 py-2 rounded-full inline-block backdrop-blur-sm shadow-sm border border-white/40">
+                Restructuring Feedback Form
+            </h2>
+            
+            <div class="animate-enter delay-500 text-gray-800 space-y-4 leading-relaxed bg-white/80 p-6 rounded-lg border border-white/50 shadow-sm backdrop-blur-sm w-full">
+                <p class="font-medium">
+                    The Bundi Medical Students Association (BMSA) aims to strengthen leadership, teamwork, and collaboration among all medical students.
+                </p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>We are currently in the process of restructuring BMSA to make it more effective, transparent, and inclusive.</li>
+                    <li>Your opinions and suggestions are extremely valuable in shaping the future structure of our organization.</li>
+                </ul>
+                <p>
+                    Please take a few minutes to share your honest feedback through this form.
+                </p>
+                <ul class="list-disc pl-5">
+                    <li>Your responses will help us build a stronger and more student-centered BMSA.</li>
+                </ul>
+                
+                <!-- Added Cookie Note -->
+                <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg flex items-start gap-3">
+                    <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                    <div>
+                        <p class="text-sm font-bold text-amber-800 mb-1">Important Note:</p>
+                        <p class="text-sm text-amber-700">
+                            Please ensure that <span class="font-semibold">cookies are enabled</span> in your browser settings. If the form below does not appear, please try enabling third-party cookies or open this page in a non-incognito window.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Form Container -->
+    <main class="w-full max-w-5xl px-0 sm:px-4 mb-10 flex-grow relative z-10 animate-enter delay-500">
+        <!-- Increased opacity to bg-white/90 for better reading experience -->
+        <div class="bg-white/90 backdrop-blur-md shadow-xl rounded-xl overflow-hidden border border-white/50 relative">
+            
+            <!-- Loading Indicator -->
+            <div class="absolute inset-0 flex items-center justify-center bg-transparent -z-10">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+
+            <!-- The Google Form Iframe -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe-bRwIUYyIyPR4mG61KcVX4LVto9wXmQOHsdxAK1hRHUTEqg/viewform?embedded=true" 
+                class="w-full block"
+                height="2400" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0"
+                title="Google Form"
+            >
+                Loading…
+            </iframe>
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="w-full py-8 text-center text-gray-800 text-sm space-y-2 bg-white/40 backdrop-blur-md border-t border-white/30 relative z-10 font-medium">
+        <p class="font-bold">&copy; 2025 Government Medical College, BUNDI. All Rights Reserved.</p>
+        <p>Designed & Developed by <span class="text-blue-900 font-extrabold">BMSA</span></p>
+        <p class="text-xs text-gray-700 font-semibold uppercase tracking-wider pt-2">Government Medical College, Bundi</p>
+    </footer>
+
+    <!-- Script to Generate Dynamic Background -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.body;
+            const logoUrl = "https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png";
+            
+            // Generate 15 floating logos for the background
+            for(let i=0; i<15; i++) {
+                const img = document.createElement('img');
+                img.src = logoUrl;
+                img.classList.add('floating-item');
+                
+                // Random Size: 50px to 200px
+                const size = Math.floor(Math.random() * 150) + 50; 
+                img.style.width = `${size}px`;
+                
+                // Random Position across viewport
+                img.style.left = `${Math.random() * 100}vw`;
+                img.style.top = `${Math.random() * 100}vh`;
+                
+                // Random Animation Timing
+                const duration = Math.floor(Math.random() * 20) + 15; // 15-35s duration
+                const delay = Math.floor(Math.random() * 5); // 0-5s delay
+                const direction = Math.random() > 0.5 ? 'reverse' : 'normal';
+                
+                img.style.animation = `float-random ${duration}s infinite linear ${delay}s ${direction}`;
+                
+                // Append to body (it has pointer-events: none via class)
+                container.insertBefore(img, container.firstChild);
+            }
+        });
+    </script>
+
+</body>
+</html>
