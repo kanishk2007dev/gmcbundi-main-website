@@ -23,14 +23,15 @@
                     },
                     colors: {
                         brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
+                            50: '#f0f7ff', // Very Light Blue Background
+                            100: '#e0effe',
                             500: '#3b82f6',
                             600: '#2563eb',
-                            700: '#1d4ed8', // Royal Blue
+                            700: '#1d4ed8', 
                             800: '#1e40af',
-                            900: '#1e3a8a', // Deep Navy
-                            gold: '#d97706',
+                            900: '#003366', // Deep Royal Blue (Matches Logo)
+                            850: '#002855', // Darker shade for contrast
+                            gold: '#FFC107', // Bright Gold (Matches Logo)
                         }
                     },
                     animation: {
@@ -56,8 +57,8 @@
         html { scroll-behavior: smooth; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #1e3a8a; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #1e40af; }
+        ::-webkit-scrollbar-thumb { background: #003366; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #002855; }
         
         .news-ticker-container {
             overflow: hidden;
@@ -110,9 +111,26 @@
             0% { opacity: 0; transform: translateY(10px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+
+        /* Fixed Background Logo */
+        .watermark-logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            opacity: 0.08; /* Subtle watermark opacity */
+            z-index: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-brand-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Background Logo Watermark -->
+    <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" class="watermark-logo" alt="BMSA Logo Watermark">
 
     <!-- Instagram Gradient Definition (Hidden) -->
     <svg width="0" height="0" class="absolute">
@@ -213,13 +231,13 @@
             <div class="flex-shrink-0">
                 <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" 
                      alt="GMC Bundi Logo" 
-                     class="h-28 w-28 md:h-36 md:w-36 object-contain rounded-full drop-shadow-sm border border-slate-100 p-1 transition-transform duration-300 hover:scale-110">
+                     class="h-28 w-28 md:h-36 md:h-36 object-contain rounded-full drop-shadow-sm border border-slate-100 p-1 transition-transform duration-300 hover:scale-110">
             </div>
 
             <!-- Text Center -->
             <div class="text-center flex-grow">
-                <h2 class="text-xl md:text-3xl font-bold text-brand-900 font-hindi mb-1">बूंदी मेडिकल स्टूडेंट एसोसिएशन, राजकीय मेडिकल कॉलेज बूंदी</h2>
-                <h1 class="text-lg md:text-2xl font-serif font-bold text-slate-800 uppercase tracking-wide" data-key="college_name_en">Bundi Medical Student Association of Government Medical College Bundi</h1>
+                <h2 class="text-xl md:text-3xl font-bold text-brand-900 font-hindi mb-1">बूंदी मेडिकल स्टूडेंट एसोसिएशन</h2>
+                <h1 class="text-lg md:text-2xl font-serif font-bold text-slate-800 uppercase tracking-wide" data-key="college_name_en">Government Medical College, Bundi</h1>
                 <p class="text-sm md:text-base text-slate-600 font-medium mt-1" data-key="univ_name">Rajasthan University of Health Sciences (RUHS)</p>
             </div>
 
@@ -349,9 +367,9 @@
                 <!-- Welfare Incharge -->
                 <div class="flex flex-col items-center text-center group">
                     <div class="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden border-4 border-slate-100 shadow-md mb-3 group-hover:border-brand-200 transition-colors duration-300">
-                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" 
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260iojt9898r201-WA0013.jpg" 
                              alt="Welfare Incharge" 
-                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                             class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_welfare_name">Dr. Vijay Nayak</h3>
                     <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="dig_welfare_title">Welfare Committee Incharge</p>
@@ -360,7 +378,7 @@
                 <!-- Sports Incharge -->
                 <div class="flex flex-col items-center text-center group">
                     <div class="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden border-4 border-slate-100 shadow-md mb-3 group-hover:border-brand-200 transition-colors duration-300">
-                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0013.jpg" 
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0016.jpg" 
                              alt="Sports Incharge" 
                              class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
                     </div>
@@ -375,7 +393,7 @@
                              alt="Academic Incharge" 
                              class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_academic_name">Dr. Name</h3>
+                    <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_academic_name">Dr. Gaurav Parashar</h3>
                     <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="dig_academic_title">Academic Incharge</p>
                 </div>
             </div>
@@ -409,20 +427,6 @@
                     <p class="text-sm md:text-base text-brand-600 font-bold uppercase tracking-widest" data-key="bmsa_pres_title_card">President</p>
                 </div>
 
-                <!-- General Secretary -->
-                <div class="flex flex-col items-center text-center group w-full md:mt-8">
-                    <div class="relative mb-4">
-                         <div class="absolute inset-0 bg-slate-200 rounded-full transform -rotate-3 scale-105 transition-transform group-hover:-rotate-6"></div>
-                        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-lg relative z-10 group-hover:border-brand-500 transition-colors duration-300">
-                             <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0018.jpg" 
-                                 alt="General Secretary" 
-                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-bold text-brand-900 leading-tight mb-1" data-key="bmsa_sec_name_card">Manish Kumar Meena</h3>
-                    <p class="text-xs md:text-sm text-slate-600 font-bold uppercase tracking-widest" data-key="bmsa_sec_title_card">General Secretary</p>
-                </div>
-
                 <!-- Vice President -->
                 <div class="flex flex-col items-center text-center group w-full md:mt-8">
                     <div class="relative mb-4">
@@ -436,12 +440,26 @@
                     <h3 class="text-lg md:text-xl font-bold text-brand-900 leading-tight mb-1" data-key="bmsa_vp_name_card">Utkarsh Shukla</h3>
                     <p class="text-xs md:text-sm text-slate-600 font-bold uppercase tracking-widest" data-key="bmsa_vp_title_card">Vice President</p>
                 </div>
+
+                <!-- General Secretary -->
+                <div class="flex flex-col items-center text-center group w-full md:mt-8">
+                    <div class="relative mb-4">
+                         <div class="absolute inset-0 bg-slate-200 rounded-full transform -rotate-3 scale-105 transition-transform group-hover:-rotate-6"></div>
+                        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-lg relative z-10 group-hover:border-brand-500 transition-colors duration-300">
+                             <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0018.jpg" 
+                                 alt="General Secretary" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-brand-900 leading-tight mb-1" data-key="bmsa_sec_name_card">Manish Kumar Meena</h3>
+                    <p class="text-xs md:text-sm text-slate-600 font-bold uppercase tracking-widest" data-key="bmsa_sec_title_card">General Secretary</p>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Main Content Grid -->
-    <div class="max-w-7xl mx-auto w-full px-4 py-12 flex-grow">
+    <div class="max-w-7xl mx-auto w-full px-4 py-12 flex-grow relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <!-- Left Content (Principal + Gallery) -->
@@ -870,7 +888,7 @@
         const translations = {
             en: {
                 skip_content: "Skip to Main Content",
-                college_name_en: "Bundi Medical Student Association of Government Medical College Bundi",
+                college_name_en: "Government Medical College, Bundi",
                 univ_name: "Rajasthan University of Health Sciences (RUHS)",
                 nav_home: "Home",
                 nav_about: "About Us",
@@ -901,7 +919,7 @@
                 dig_welfare_title: "Welfare Committee Incharge",
                 dig_sports_name: "Dr. Mithlesh Meena",
                 dig_sports_title: "Sports Incharge",
-                dig_academic_name: "Dr. Name",
+                dig_academic_name: "Dr. Gaurav Parashar",
                 dig_academic_title: "Academic Incharge",
                 bmsa_council_title: "BMSA Executive Council",
                 bmsa_pres_name_card: "Vinit Choudhury",
@@ -961,7 +979,7 @@
             },
             hi: {
                 skip_content: "मुख्य सामग्री पर जाएं",
-                college_name_en: "बूंदी मेडिकल स्टूडेंट एसोसिएशन, राजकीय मेडिकल कॉलेज बूंदी",
+                college_name_en: "राजकीय मेडिकल कॉलेज, बूंदी",
                 univ_name: "राजस्थान स्वास्थ्य विज्ञान विश्वविद्यालय (RUHS)",
                 nav_home: "मुख्य पृष्ठ",
                 nav_about: "हमारे बारे में",
@@ -992,7 +1010,7 @@
                 dig_welfare_title: "कल्याण समिति प्रभारी",
                 dig_sports_name: "डॉ. मिथलेश मीणा",
                 dig_sports_title: "खेल प्रभारी",
-                dig_academic_name: "डॉ. नाम",
+                dig_academic_name: "डॉ. गौरव पाराशर",
                 dig_academic_title: "शैक्षणिक प्रभारी",
                 bmsa_council_title: "BMSA कार्यकारी परिषद",
                 bmsa_pres_name_card: "विनीत चौधरी",
