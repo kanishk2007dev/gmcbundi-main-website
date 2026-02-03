@@ -31,6 +31,10 @@
             font-weight: 600;
             font-size: 0.875rem;
         }
+        .coming-soon::after {
+            content: 'Coming Soon';
+            color: #64748b;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -107,7 +111,6 @@
         <section id="composition" class="mb-20">
             <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Committee Composition</h2>
             <div class="max-w-4xl mx-auto">
-                <!-- Advisor Members only -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 section-card">
                     <h3 class="text-blue-600 font-bold uppercase tracking-wider text-xs mb-6 text-center">Advisor Members</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -127,24 +130,24 @@
         <section id="members" class="mb-20">
             <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center text-blue-600">Executive Representation & Batch Heads</h2>
             
-            <!-- Finance Wing -->
+            <!-- Disciplinary Wing -->
             <div class="mb-16">
                 <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center">
-                    <span class="bg-blue-600 w-2 h-6 mr-3 rounded-full"></span>
-                    Finance Wing
+                    <span class="bg-indigo-600 w-2 h-6 mr-3 rounded-full"></span>
+                    Disciplinary Wing
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                    <!-- Finance Secretary -->
+                    <!-- Disciplinary Secretary -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center section-card">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 photo-placeholder border-4 border-slate-100"></div>
-                        <h4 class="text-xl font-bold text-slate-900">Finance Secretary</h4>
-                        <p class="text-blue-600 font-medium text-sm mt-1 uppercase tracking-wider">Executive Office</p>
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 photo-placeholder border-4 border-indigo-100"></div>
+                        <h4 class="text-xl font-bold text-slate-900">Disciplinary Secretary</h4>
+                        <p class="text-indigo-600 font-medium text-sm mt-1 uppercase tracking-wider">Executive Office</p>
                     </div>
-                    <!-- Joint Finance Secretary -->
+                    <!-- Joint Disciplinary Secretary -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center section-card">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 photo-placeholder border-4 border-slate-100"></div>
-                        <h4 class="text-xl font-bold text-slate-900">Joint Finance Secretary</h4>
-                        <p class="text-blue-600 font-medium text-sm mt-1 uppercase tracking-wider">Executive Office</p>
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 photo-placeholder border-4 border-indigo-100"></div>
+                        <h4 class="text-xl font-bold text-slate-900">Joint Disciplinary Secretary</h4>
+                        <p class="text-indigo-600 font-medium text-sm mt-1 uppercase tracking-wider">Executive Office</p>
                     </div>
                 </div>
             </div>
@@ -169,10 +172,14 @@
                         <p class="text-emerald-600 font-medium text-sm mt-1 uppercase">Student Representative</p>
                     </div>
                     <!-- Head 2026 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center section-card">
-                        <div class="w-32 h-40 rounded-xl mx-auto mb-4 photo-placeholder border-2 border-slate-100"></div>
-                        <h4 class="text-lg font-bold text-slate-900">Batch Head 2026</h4>
-                        <p class="text-emerald-600 font-medium text-sm mt-1 uppercase">Student Representative</p>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center section-card relative overflow-hidden">
+                        <!-- Coming Soon Overlay Badge -->
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-1 rounded-full border border-amber-200 shadow-sm uppercase tracking-tighter">Coming Soon</span>
+                        </div>
+                        <div class="w-32 h-40 rounded-xl mx-auto mb-4 photo-placeholder border-2 border-slate-100 opacity-60"></div>
+                        <h4 class="text-lg font-bold text-slate-400">Batch Head 2026</h4>
+                        <p class="text-slate-400 font-medium text-sm mt-1 uppercase">To Be Announced</p>
                     </div>
                 </div>
             </div>
