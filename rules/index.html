@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMSA Council Constitution Explorer</title>
+    <!-- Chosen Palette: "Institutional Trust" - Deep Navy (#1e3a8a), Slate Blue (#475569), Warm Neutral Background (#f8fafc), White (#ffffff) for clarity. -->
+    
+    <!-- Application Structure Plan: 
+         1. Header: Enhanced branding with the official logo, Hindi title, and college/university details.
+         2. Interactive Role Dashboard: Three columns/cards representing the key roles. Clicking one activates detailed view.
+         3. Role Detail Section: Dynamic content area with "Core Mandate", "Key Duties", and "Power Analysis" (Radar Chart).
+         4. "Constitutional Protocols" (Scenario Simulator): Interactive "What if" tool for succession and crisis management.
+         5. Footer: institutional credit and copyright.
+    -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        /* Chart Container Specifics */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-gradient {
+            background: linear-gradient(to right, #ffffff, #f8fafc);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-100">
+
+    <!-- Header Section with Logo and Multi-line Text -->
+    <header class="header-gradient border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <!-- Logo -->
+                <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" 
+                     alt="BMSA Logo" 
+                     class="h-16 w-16 object-contain drop-shadow-sm"
+                     onerror="this.style.display='none'">
+                
+                <!-- Branding Text -->
+                <div class="flex flex-col">
+                    <h1 class="text-xl md:text-2xl font-bold text-blue-900 leading-tight">
+                        बूंदी मेडिकल स्टूडेंट एसोसिएशन (BMSA)
+                    </h1>
+                    <p class="text-sm md:text-base font-semibold text-slate-700">
+                        Government Medical College, Bundi
+                    </p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-medium">
+                        Rajasthan University of Health Sciences (RUHS)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex gap-4 sm:gap-6 text-sm font-medium text-slate-500">
+                <button onclick="scrollToSection('roles-section')" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-blue-900">Roles</button>
+                <button onclick="scrollToSection('scenarios-section')" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-blue-900">Protocols</button>
+                <button onclick="scrollToSection('analysis-section')" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-blue-900">Analysis</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="max-w-4xl">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Constitution and Rules of the Council</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                Welcome to the digital governance explorer for the **BMSA**. This platform translates the complex constitutional rules into an interactive interface. Explore the specific powers of the <span class="font-semibold text-blue-900">President</span>, <span class="font-semibold text-blue-900">Vice-President</span>, and <span class="font-semibold text-blue-900">General Secretary</span> as defined by GMC Bundi and RUHS guidelines.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                    Official Constitutional Record
+                </div>
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600">
+                    GMC Bundi Campus
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN DASHBOARD: Roles -->
+    <main id="roles-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- Section Intro -->
+        <div class="mb-8 border-l-4 border-blue-900 pl-4">
+            <h3 class="text-xl font-bold text-slate-900">Council Officers Dashboard</h3>
+            <p class="text-sm text-slate-500 mt-1">Select an officer to explore their jurisdictional authority and mandated duties.</p>
+        </div>
+
+        <!-- Role Selector Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <button onclick="selectRole('president')" id="btn-president" class="role-card group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all text-left relative overflow-hidden">
+                <div class="absolute top-0 right-0 h-16 w-16 bg-blue-50 rounded-bl-full -mr-4 -mt-4 transition-colors group-hover:bg-blue-100"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-3">👑</div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-700">The President</h3>
+                    <p class="text-sm text-slate-500 mt-2">Highest executive authority within the Association.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-blue-600">
+                    View Clauses &rarr;
+                </div>
+            </button>
+
+            <button onclick="selectRole('vp')" id="btn-vp" class="role-card group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all text-left relative overflow-hidden">
+                <div class="absolute top-0 right-0 h-16 w-16 bg-slate-50 rounded-bl-full -mr-4 -mt-4 transition-colors group-hover:bg-slate-100"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-3">🛡️</div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-700">Vice-President</h3>
+                    <p class="text-sm text-slate-500 mt-2">Succession authority and Society supervisor.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-blue-600">
+                    View Clauses &rarr;
+                </div>
+            </button>
+
+            <button onclick="selectRole('gensec')" id="btn-gensec" class="role-card group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all text-left relative overflow-hidden">
+                <div class="absolute top-0 right-0 h-16 w-16 bg-slate-50 rounded-bl-full -mr-4 -mt-4 transition-colors group-hover:bg-slate-100"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-3">📝</div>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-700">General Secretary</h3>
+                    <p class="text-sm text-slate-500 mt-2">Administrative lead and event coordinator.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-blue-600">
+                    View Clauses &rarr;
+                </div>
+            </button>
+        </div>
+
+        <!-- Dynamic Content Area -->
+        <div id="role-detail-view" class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden fade-in min-h-[400px]">
+            <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 flex justify-between items-center">
+                <h2 id="detail-title" class="text-2xl font-bold text-slate-800">Select a Role</h2>
+                <span id="detail-badge" class="px-3 py-1 bg-slate-200 text-slate-600 text-xs rounded-full font-bold uppercase tracking-wide hidden">Executive</span>
+            </div>
+
+            <div class="flex flex-col lg:flex-row">
+                <!-- Left: Text Content -->
+                <div class="p-6 lg:w-2/3 lg:border-r border-slate-100">
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Core Responsibilities</h4>
+                        <div id="detail-content" class="space-y-4">
+                            <p class="text-slate-500 italic text-center py-10">Select an executive card above to view constitutional details.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Analysis -->
+                <div id="analysis-section" class="p-6 lg:w-1/3 bg-slate-50/50">
+                    <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4 text-center">Power Distribution Analysis</h4>
+                    
+                    <div class="chart-container">
+                        <canvas id="roleRadarChart"></canvas>
+                    </div>
+
+                    <div id="key-powers-box" class="mt-6 bg-white p-4 rounded-lg border border-slate-200 shadow-sm hidden">
+                        <h5 class="text-sm font-bold text-slate-800 mb-2 border-b border-slate-100 pb-2">Institutional Authority</h5>
+                        <ul id="key-powers-list" class="text-sm text-slate-600 space-y-2 list-disc pl-4">
+                            <!-- Populated via JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- SCENARIOS / PROTOCOLS SECTION -->
+    <section id="scenarios-section" class="bg-slate-100 py-12 mt-12 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+                
+                <div class="md:w-1/3">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Constitutional Protocols</h2>
+                    <p class="text-slate-600 mb-6">
+                        These protocols ensure that the BMSA Council remains functional during emergencies, absences, or legal transitions. 
+                    </p>
+                    <div class="bg-blue-900 text-white p-5 rounded-xl shadow-lg">
+                        <h4 class="font-bold mb-2">Succession Tip:</h4>
+                        <p class="text-sm text-blue-100">In almost all cases of presidential vacancy or crisis, authority cascades directly to the Vice-President.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Simulator -->
+                <div class="md:w-2/3 bg-white p-6 rounded-xl shadow-md border border-slate-200">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Simulate Constitutional Scenario:</label>
+                    <select id="scenario-selector" onchange="runScenario()" class="w-full p-3 border border-slate-300 rounded-lg text-slate-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-slate-50">
+                        <option value="default">-- Select a Scenario --</option>
+                        <option value="impeachment">President is under Impeachment</option>
+                        <option value="noconfidence">No-Confidence Motion against President</option>
+                        <option value="absence">President is Temporarily Absent</option>
+                        <option value="appointments">New Society Head Needs Appointment</option>
+                        <option value="meeting">Calling a General Body Meeting</option>
+                    </select>
+
+                    <div id="scenario-result" class="mt-6 p-6 bg-slate-50 rounded-lg border border-slate-200 min-h-[120px] transition-all duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl" id="scenario-icon">🏛️</div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800 mb-1" id="scenario-title">Awaiting Selection</h4>
+                                <p class="text-slate-600" id="scenario-text">Select an event from the list above to view the constitutional mandate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" 
+                 alt="BMSA Small Logo" 
+                 class="h-10 w-10 mx-auto mb-4 opacity-50 grayscale hover:grayscale-0 transition-all">
+            <p class="text-slate-500 text-sm font-medium">BMSA Council Governance Dashboard</p>
+            <p class="text-slate-400 text-xs mt-2 uppercase tracking-widest">GMC Bundi | RUHS Rajasthan</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const roleData = {
+            president: {
+                title: "The President",
+                badge: "Chief Executive",
+                color: "rgb(30, 58, 138)",
+                duties: [
+                    { title: "Presiding Officer", text: "(a) He/she shall preside over all the meetings of the General Body in usual circumstances." },
+                    { title: "Executive Authority", text: "(b) Authority over all elected representatives of BMSA and over the secretaries of various clubs and societies; joint responsibility for smooth functioning of the Council." },
+                    { title: "Union Spokesman", text: "(c) President will nominate the spokesman for the union." },
+                    { title: "Appointments", text: "(f) Appointing Society head, society secretary and 2 executives of General Cleanliness society after consultation with the Vice President." },
+                    { title: "Ultimate Power", text: "(g) President holds the ultimate power. He can overwrite any decision at his will." }
+                ],
+                stats: [98, 30, 75, 55, 10],
+                powers: [
+                    "Absolute decision override (Clause g)",
+                    "Appointment of Society heads",
+                    "Presiding authority for General Body",
+                    "Executive oversight of all representatives"
+                ]
+            },
+            vp: {
+                title: "The Vice-President",
+                badge: "Succession Lead",
+                color: "rgb(71, 85, 105)",
+                duties: [
+                    { title: "Delegated Powers", text: "(a) Exercise all such powers and duties that may be relegated to him by the President." },
+                    { title: "Acting Authority", text: "(b) In absence of the President, he/she shall act for and on behalf of the President." },
+                    { title: "Administrative Support", text: "(c) He/she shall assist the President in all of his duties." },
+                    { title: "Impeachment Handler", text: "(d) Shall call for a General Body meeting if the President is under impeachment." },
+                    { title: "Interim Power", text: "(e) In case of non-confidence, he will take all powers of president till results." },
+                    { title: "Club Supervisor", text: "(h) Supervisor of all the clubs and societies present in the college." }
+                ],
+                stats: [65, 45, 95, 35, 90],
+                powers: [
+                    "Direct Supervision of Clubs (Clause h)",
+                    "Interim Presidential Authority",
+                    "Meeting authority during impeachment",
+                    "Mandatory appointment consultant"
+                ]
+            },
+            gensec: {
+                title: "General Secretary",
+                badge: "Admin & Operations",
+                color: "rgb(15, 118, 110)",
+                duties: [
+                    { title: "Recording Officer", text: "(a) Recording secretary for the BMSA and during the general body meeting." },
+                    { title: "Meeting Logistics", text: "(b) Call General Body meetings in consultation with the President or Vice President." },
+                    { title: "Correspondence", text: "(c) Attend to all BMSA correspondence under instructions from the President." },
+                    { title: "Asset Management", text: "(d) Maintain the BMSA Office and stores." },
+                    { title: "Event Coordination", text: "(e) Chief Coordinator of the annual intra and inter collegiate events." }
+                ],
+                stats: [15, 98, 40, 25, 5],
+                powers: [
+                    "Meeting schedule coordinator",
+                    "Chief Event Operations Lead",
+                    "Official Custodian of BMSA Stores",
+                    "Primary Communication Officer"
+                ]
+            }
+        };
+
+        const scenarioData = {
+            impeachment: {
+                title: "Presidential Impeachment",
+                icon: "⚖️",
+                color: "bg-red-50 border-red-200 text-red-900",
+                text: "The <strong>Vice-President</strong> is constitutionally mandated to call for a General Body meeting to address the impeachment. Authority transitions to the VP for this process."
+            },
+            noconfidence: {
+                title: "No-Confidence Motion",
+                icon: "⚠️",
+                color: "bg-orange-50 border-orange-200 text-orange-900",
+                text: "The <strong>Vice-President</strong> immediately assumes ALL powers of the President until the motion's result is finalized (Clause e)."
+            },
+            absence: {
+                title: "Temporary Absence",
+                icon: "👤",
+                color: "bg-blue-50 border-blue-200 text-blue-900",
+                text: "The <strong>Vice-President</strong> acts on behalf of the President in their absence, maintaining full operational continuity (Clause b)."
+            },
+            appointments: {
+                title: "Appointing Society Heads",
+                icon: "🤝",
+                color: "bg-green-50 border-green-200 text-green-900",
+                text: "The <strong>President</strong> holds appointment power, but MUST perform a formal consultation with the <strong>Vice-President</strong> before selection (Clause f)."
+            },
+            meeting: {
+                title: "General Body Meeting",
+                icon: "📢",
+                color: "bg-indigo-50 border-indigo-200 text-indigo-900",
+                text: "The <strong>General Secretary</strong> initiates the call, but it requires prior consultation with either the <strong>President</strong> or <strong>Vice-President</strong>."
+            }
+        };
+
+        let radarChart = null;
+
+        function initChart() {
+            const ctx = document.getElementById('roleRadarChart').getContext('2d');
+            radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Executive Power', 'Admin Load', 'Oversight', 'Representation', 'Crisis Mgmt'],
+                    datasets: [{
+                        label: 'Intensity Index',
+                        data: roleData.president.stats,
+                        fill: true,
+                        backgroundColor: 'rgba(30, 58, 138, 0.2)',
+                        borderColor: 'rgb(30, 58, 138)',
+                        pointBackgroundColor: 'rgb(30, 58, 138)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff'
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        function selectRole(roleKey) {
+            const data = roleData[roleKey];
+            
+            document.querySelectorAll('.role-card').forEach(btn => btn.classList.remove('ring-2', 'ring-blue-500', 'bg-blue-50'));
+            document.getElementById(`btn-${roleKey}`).classList.add('bg-blue-50', 'ring-2', 'ring-blue-500');
+
+            const detailView = document.getElementById('role-detail-view');
+            detailView.classList.remove('fade-in');
+            void detailView.offsetWidth;
+            detailView.classList.add('fade-in');
+
+            document.getElementById('detail-title').innerText = data.title;
+            const badge = document.getElementById('detail-badge');
+            badge.innerText = data.badge;
+            badge.classList.remove('hidden');
+
+            const contentDiv = document.getElementById('detail-content');
+            contentDiv.innerHTML = data.duties.map(duty => `
+                <div class="bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-200 transition-all">
+                    <h5 class="font-bold text-slate-800 text-sm mb-1">${duty.title}</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">${duty.text}</p>
+                </div>
+            `).join('');
+
+            const powersBox = document.getElementById('key-powers-box');
+            const powersList = document.getElementById('key-powers-list');
+            powersBox.classList.remove('hidden');
+            powersList.innerHTML = data.powers.map(p => `<li>${p}</li>`).join('');
+
+            updateChart(data);
+        }
+
+        function updateChart(data) {
+            if (!radarChart) return;
+            radarChart.data.datasets[0].data = data.stats;
+            radarChart.data.datasets[0].borderColor = data.color;
+            radarChart.data.datasets[0].backgroundColor = data.color.replace('rgb', 'rgba').replace(')', ', 0.2)');
+            radarChart.update();
+        }
+
+        function runScenario() {
+            const key = document.getElementById('scenario-selector').value;
+            const resultBox = document.getElementById('scenario-result');
+            const title = document.getElementById('scenario-title');
+            const text = document.getElementById('scenario-text');
+            const icon = document.getElementById('scenario-icon');
+
+            if (key === 'default') {
+                resultBox.className = "mt-6 p-6 bg-slate-50 rounded-lg border border-slate-200 min-h-[120px]";
+                title.innerText = "Awaiting Selection";
+                text.innerText = "Select an event from the list above to view the constitutional mandate.";
+                icon.innerText = "🏛️";
+                return;
+            }
+
+            const sc = scenarioData[key];
+            resultBox.className = `mt-6 p-6 rounded-lg border min-h-[120px] shadow-sm ${sc.color}`;
+            title.innerText = sc.title;
+            text.innerHTML = sc.text;
+            icon.innerText = sc.icon;
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onload = function() {
+            initChart();
+            selectRole('president');
+        };
+    </script>
+</body>
+</html>
