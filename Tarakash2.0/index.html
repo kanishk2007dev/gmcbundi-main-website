@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarakash 2.0 - Annual Festival | BMSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] },
+                    colors: { brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#003366', gold: '#FFC107' } },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .team-card:hover { transform: translateY(-5px); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-brand-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" class="h-10 w-10 rounded-full border-2 border-white bg-white p-0.5" alt="Logo">
+                <div>
+                    <h1 class="font-bold text-lg leading-tight tracking-wide">BMSA</h1>
+                    <p class="text-xs text-brand-100">GMC Bundi</p>
+                </div>
+            </div>
+            <a href="https://gmcbundi.dpdns.org/" class="px-4 py-2 bg-brand-700 hover:bg-brand-600 rounded text-sm font-medium transition flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative bg-slate-900 py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[url('https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0039.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-900/90 to-brand-900/70"></div>
+        <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-xs font-bold uppercase tracking-widest mb-4 animate-fade-in-up">Annual Festival</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-black text-white mb-6 drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">TARAKASH 2.0</h1>
+            <p class="text-lg md:text-xl text-brand-100 max-w-2xl mx-auto font-light animate-fade-in-up" style="animation-delay: 0.2s;">
+                Unleashing the spirit of competition, creativity, and camaraderie. Witness the battle of the houses!
+            </p>
+        </div>
+    </div>
+
+    <!-- Teams Grid -->
+    <main class="max-w-7xl mx-auto px-4 py-16 flex-grow w-full">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-brand-900 inline-block border-b-4 border-brand-gold pb-1">The 4 Houses (2026)</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            
+            <!-- 1. Flaming Falcons -->
+            <div class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                <div class="relative h-64 w-full bg-black">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM.jpeg" class="h-full w-full object-contain" alt="Flaming Falcons Logo">
+                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Flaming Falcons</h3>
+                     </div>
+                </div>
+                <div class="p-6 flex-grow bg-slate-50">
+                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-slate-50 p-4 rounded-lg">
+                        <ul class="text-sm space-y-2 text-slate-700">
+                           <li>Abhishek Ajmera, Murlidhar Yadav, Lokesh Gurjar, Vishal Sharma, Vineet Chaudhary, Surendra Khokar, Saksham Mirdha, Sidharth Dew, Manish Verma, Manish Meena, Devesh Chaudhary, Ankit Yadav, Ekanand Odhwal, Shreek Sana, Yash Tabla, Rigved Puri, Durgesh, Praveen, Bhavyavardhan, Vikas Sheoran, Darshan Sahu, Ankur Sharma, Sagar Sharma, Yash Kashyap, Krishan Sharma, Mahesh Jorwal, Praful Dhobhi, Kavya Lodhi, Virendra Chaudhary, Lalkishan Bera, Upasana Meena, Pranjal Jain, Arita Kanwar, Nena Sen, Prachi Sharma, Lipanssi Mehra, Komal Ametha, Divya Sharma, Yogita Yadav, Bharti, Muskan Sevda, Priya Chandak, Nikita Yadav, Sara Jalori, Megha Gupta, Uday, Parishita Meena, Shree Kishan Gehlot, Neha Sain, Durgesh Dangi, Rigved Puri Goswami, Praveen Purohit, Siddharth Deval, Shyam Sundar, Shivang, Durgesh Charpota, Aman Chaudhary, Garvit Jorwal, Mayank Meena, Daksha Yogi, Anvesh Agarwal, Sarthak Yadav, Vasu Mittal, Mohit Beniwal, Harshit Sainger, Kanishk, Renu Choudhary, Hitisha Khinchi, Priyanka Yadav, Ailicia, Diksha Sharma, Ishikia Khandelwal, Sakshi Meena, Rinku, Pragya Meena, Divya Paliwal, Aarti Mahicha, Akshara Meena, Samiksha Gupta</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Godzilla Guardians -->
+            <div class="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                <div class="relative h-64 w-full bg-black">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Godzilla Guardians Logo">
+                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Godzilla Guardians</h3>
+                     </div>
+                </div>
+                <div class="p-6 flex-grow bg-slate-50">
+                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-slate-50 p-4 rounded-lg">
+                        <ul class="text-sm space-y-2 text-slate-700">
+                           <li>Harsh Sharma, Amit Sharma, Tushar Sen, Dharmendra Jangid, Nitesh Pradhan, Keshav Dodwariya, Jayanti Ninama, Radheshyam, Utkarsh Shukla, Raj Goswami, Satish Chaudhary, Hariom Verma, Tarun Dhakad, Ram Balwan Meena, Akshit Chindwada, Krishan Gurjar, Himanshu Gurjar, Deepak Verma, Vikas Gharwal, Gaurav Sharma, Pawan Dudi, Saurabh Meena, Suryansh Meena, Himanshu Puna, Bhavya Damor, Jitendra Dangi, Samarth Inani, Shiv Bishnoi, Rudra Purohit, Aadil Khan, Meghna Gursahaney, Sheeti, Yogita Meena, Arpita, Priya Malinda, Gunjan Agarwal, Arti Yadav, Anushka, Himanshi Kundra, Riddhima Jangid, Suhani Tiwari, Nikita Verma, Saijal Tak, Bhawana Shekhawat, Deepanshi Purohit, Lavanya Rajan, Pooja Meena, Meenal Verma, Aarya Sharma, Mudita Mehra, Aditya Veer Gurjar, Aamna Gouri, Daksh Sharma, Manish Nainiwal, Ajay Verma, Irfan Khan, Pradeep Kumar Dhakar, Anurag Indauiya, Vedant Khajja, Prakash Kumar, Atharv Patidar, Akshat Gupta, Dinesh Verma, Mahaveer Meena, Harshita Yadav, Manasvi Dungarwal, Harshvi Meena, Shivani Mehra, Tanisha Choudhary, Neelam Choudhary, Payal Choudhary, Bittu Bansal, Bhavishka Prajapati, Saniya Khan, Dhapu Choudhary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Hydra Havocs -->
+            <div class="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                <div class="relative h-64 w-full bg-black">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Hydra Havocs Logo">
+                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Hydra Havocs</h3>
+                     </div>
+                </div>
+                <div class="p-6 flex-grow bg-slate-50">
+                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-slate-50 p-4 rounded-lg">
+                        <ul class="text-sm space-y-2 text-slate-700">
+                           <li>Ritik Labana, Harshit Agarwal, Lakshya Goyal, Uday Maheshwari, Vaibhav Singh, Shreyansh Mundhra, Pramod Devasi, Chirag Garg, Naman Paharia, Vansh Vamaniya, Kuldeep Jonwal, Bharat Suthar, Manish Yadav, Kapil Jat, Vatsal Nama, Vikram Saini, Aaryan Vashishtha, Pankaj Gurjar, Prince Bhaskar, Vasu Somani, MD. Arib, Abhishek Tailor, Naman Khandelwal, Deepak Meena, Rohit Samoliya, Rohit Kumar, Abhay Singh, Bhumika Maheshwari, Kanishka Sharma, Anagha Parashar, Sukhveer Kaur, Pooja Chaudhary, Anisha Rahman, Ishita Rathod, Nikita Bijania, Shreya Shenoy, Aditi Mandusia, Ruchika Kumawat, Hardika Jain, Pooja Chaudhary, Priyal Paliwal, Nidhi Damor, Suruchi Sharma, Keerti Yadav, Gungun Yadav, Kumari Imanshi, Naresh Kumar, Shiv Jinjwadia, Vinod Chaudhary, Waqar Ahmed, Adit Gupta, Akshit Chanwada, Deepak Dewasi, Yash Kumar Choubey, Sanjay Pancholi, Rahul, Aarav Porwal, Sanjay Chauhan, Piyush, Mohammad Farhan Raza, Kishor Yadav, Maninder Verma, Pulkit Jhalani, Parth Mahaver, Mahesh Meena, Kuldeep Bairwa, Vaibhav, Aman Ansari, Aditya Jindal, Khushbu Kanwar, Vanshika Lalwani, Shreenidhi, Gunjan Pancholi, Gauri Varshney, Jahnavi, Jaahnvi Singh, Taniya Bhardwaj, Sakshi Sharma, Hemlata Dhakar, Gauri Jeengar, Vanshika Garg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Kraken Knights -->
+            <div class="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                <div class="relative h-64 w-full bg-black">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Kraken Knights Logo">
+                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Kraken Knights</h3>
+                     </div>
+                </div>
+                <div class="p-6 flex-grow bg-slate-50">
+                    <div class="h-80 overflow-y-auto pr-2 custom-scrollbar">
+                         <p class="font-bold text-purple-700 mb-2 border-b border-purple-200 pb-1 sticky top-0 bg-slate-50">Team Members:</p>
+                        <ul class="text-sm space-y-1 text-slate-700 leading-relaxed">
+                           <li>Garvit Sharma, Ajay Nagar, Vikas Yadav, Aditya Mandusia, Aman Ansari, Aras Khan, Manoj Kumar, Adityaman Singh, Md. Akram, Devansh Singh, Himanshu Meena, Akshay Sankhla, Deepak Devasi, Deepak Jingonia, Vivek Meena, Pradyuman Singh, Bhanwar Singh, Aashish Ninama, Aaryan Sharma, Praveen Jani, Harshit Gupta, Neeraj Meena, Sameer Tak, Rahul Chittora, Naved Qureshi, Alwish Gauri, Garvit Verma, Nirmal Mali, Bharat Patel, Nousheen Khan, Khushi Rajbhanawat, Himanshi Meena, Suman Dhakad, Arshin, Komal Rathore, Pratyusha Singh, Padma Bishnoi, Mehvish Bano, Janya Sharma, Priyanka Gothwal, Gunjan Saini, Sneha Mittal, Yukta Dantla, Jahnavi Jain, Kirti Mathur, Sonia, Priyanka Lalawat, Ishika Sharma, Shivanshu Upadhyay, Kishore Kumar, Yash Tambia, Naveen Kumar Sharma, Chetan Yadav, Anuj Puri, Nitul Choudhary, Lakshit Samariya, Krishna Gautam, Abhijeet Mina, Suresh Saini, Jaykaran Godara, Mohd Sameer Tak, Suresh Choudhary, Kismat Prajapat, Pratyaksh Jangid, Keshav Dodwariya, Promod Dewasi, Arshin Bahamni, Mohd Akram Silawat, Ashish Ninama, Himanshu Basethia, Tanya Sharma, Mokshaa, Girija Saini, Harshita Morwal, Kanishka, Vindhya Kabra, Muskan Saini, Anushka Shekhawat, Rigveda Jangid, Rajshree Meena, Cheshta Jagenia, Muskan Yadav, Nupur Choudhary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Instagram Button -->
+        <div class="text-center mb-16">
+             <a href="https://www.instagram.com/taraksh.gmcbundi/?hl=en" target="_blank" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                @taraksh.gmcbundi
+            </a>
+            <p class="mt-4 text-brand-400">&copy; 2025 BMSA - GMC Bundi</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+        <button class="absolute top-4 right-4 text-white hover:text-brand-gold focus:outline-none z-[70]" onclick="closeLightbox()">
+            <svg class="w-10 h-10 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                img.classList.remove('scale-95');
+                img.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            lightbox.classList.add('opacity-0');
+            img.classList.remove('scale-100');
+            img.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                img.src = '';
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
