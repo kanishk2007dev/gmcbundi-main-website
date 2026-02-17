@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bundi Medical Student Association of Government Medical College Bundi</title>
     
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7150683500942089"
+     crossorigin="anonymous"></script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -23,8 +27,8 @@
                     },
                     colors: {
                         brand: {
-                            50: '#f0f7ff', // Very Light Blue Background
-                            100: '#e0effe',
+                            50: '#eff6ff', 
+                            100: '#dbeafe',
                             500: '#3b82f6',
                             600: '#2563eb',
                             700: '#1d4ed8', 
@@ -37,6 +41,8 @@
                     animation: {
                         'scroll-up': 'scrollUp 60s linear infinite',
                         'fade-in': 'fadeIn 1s ease-in-out',
+                        'tilt': 'tilt 10s infinite linear',
+                        'shine': 'shine 1.5s infinite',
                     },
                     keyframes: {
                         scrollUp: {
@@ -46,6 +52,15 @@
                         fadeIn: {
                             '0%': { opacity: '0' },
                             '100%': { opacity: '1' },
+                        },
+                        tilt: {
+                            '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(0.5deg)' },
+                            '75%': { transform: 'rotate(-0.5deg)' },
+                        },
+                        shine: {
+                            '0%': { left: '-100%' },
+                            '100%': { left: '200%' },
                         }
                     }
                 }
@@ -125,9 +140,22 @@
             z-index: 0;
             pointer-events: none;
         }
+        
+        /* Theme Adjustments */
+        body {
+            background-color: #f8fafc; /* slate-50 */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.03) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.03) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .bg-white {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(8px);
+        }
     </style>
 </head>
-<body class="bg-brand-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
 
     <!-- Background Logo Watermark -->
     <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" class="watermark-logo" alt="BMSA Logo Watermark">
@@ -150,40 +178,18 @@
         <div class="relative flex flex-col items-center justify-center w-full max-w-lg px-4">
             <div class="relative w-32 h-32 mb-4">
                 <!-- 7 Colored Dots Container -->
-                <!-- Spins for 2s, then dots collapse inwards -->
                 <div class="absolute inset-0 z-10" style="animation: rainbowSpin 2s linear infinite;">
-                    <!-- Red -->
-                    <div class="absolute w-full h-full rotate-0">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
-                    <!-- Orange -->
-                    <div class="absolute w-full h-full rotate-[51deg]">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
-                    <!-- Yellow -->
-                    <div class="absolute w-full h-full rotate-[102deg]">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
-                    <!-- Green -->
-                    <div class="absolute w-full h-full rotate-[154deg]">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
-                    <!-- Blue -->
-                    <div class="absolute w-full h-full rotate-[205deg]">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
-                    <!-- Indigo -->
-                    <div class="absolute w-full h-full rotate-[257deg]">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-indigo-600 shadow-[0_0_10px_rgba(79,70,229,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
-                    <!-- Violet -->
-                    <div class="absolute w-full h-full rotate-[308deg]">
-                        <div class="mx-auto w-3 h-3 rounded-full bg-violet-600 shadow-[0_0_10px_rgba(124,58,237,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div>
-                    </div>
+                    <div class="absolute w-full h-full rotate-0"><div class="mx-auto w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
+                    <div class="absolute w-full h-full rotate-[51deg]"><div class="mx-auto w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
+                    <div class="absolute w-full h-full rotate-[102deg]"><div class="mx-auto w-3 h-3 rounded-full bg-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
+                    <div class="absolute w-full h-full rotate-[154deg]"><div class="mx-auto w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
+                    <div class="absolute w-full h-full rotate-[205deg]"><div class="mx-auto w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
+                    <div class="absolute w-full h-full rotate-[257deg]"><div class="mx-auto w-3 h-3 rounded-full bg-indigo-600 shadow-[0_0_10px_rgba(79,70,229,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
+                    <div class="absolute w-full h-full rotate-[308deg]"><div class="mx-auto w-3 h-3 rounded-full bg-violet-600 shadow-[0_0_10px_rgba(124,58,237,0.6)]" style="animation: convergeToCenter 0.8s ease-in-out 1.8s forwards;"></div></div>
                 </div>
             </div>
             
-            <!-- Final Text (Explodes from center where dots converged) -->
+            <!-- Final Text -->
             <div class="absolute top-12 z-20 flex flex-col items-center justify-center w-full">
                 <div class="opacity-0" style="animation: textExplode 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 2.4s forwards;">
                     <h1 class="text-3xl md:text-5xl font-black font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-rose-500 drop-shadow-sm whitespace-nowrap text-center">
@@ -200,7 +206,7 @@
     </div>
 
     <!-- Top Bar -->
-    <div class="bg-brand-900 text-white py-1.5 text-xs md:text-sm border-b border-brand-800">
+    <div class="bg-brand-900 text-white py-1.5 text-xs md:text-sm border-b border-brand-800 relative z-20">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <span class="flex items-center hover:text-brand-gold transition cursor-pointer">
@@ -231,7 +237,7 @@
             <div class="flex-shrink-0">
                 <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" 
                      alt="GMC Bundi Logo" 
-                     class="h-28 w-28 md:h-36 md:h-36 object-contain rounded-full drop-shadow-sm border border-slate-100 p-1 transition-transform duration-300 hover:scale-110">
+                     class="h-28 w-28 md:h-36 md:h-36 object-contain rounded-full drop-shadow-sm border-4 border-black p-1 transition-transform duration-300 hover:scale-110">
             </div>
 
             <!-- Text Center -->
@@ -268,7 +274,9 @@
                     <a href="#home" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_home">Home</a>
                     <a href="#about" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_about">About Us</a>
                     <a href="#committees" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_committees">Committees</a>
-                    <a href="#tarakash" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_gallery">Tarakash 1.0</a>
+                    <a href="#schedules" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_schedules">Festival Schedules</a>
+                    <a href="#student-corner" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_student_corner">Student Corner</a>
+                    <a href="tarakash.html" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_gallery">Tarakash 1.0</a>
                     <a href="#facilities" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_facilities">Facilities</a>
                     <a href="#contact" class="px-5 py-3.5 hover:bg-brand-800 transition uppercase tracking-wider border-b-2 border-transparent hover:border-brand-gold" data-key="nav_contact">Contact</a>
                 </div>
@@ -280,21 +288,23 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-800 border-t border-brand-700">
             <a href="#home" class="block px-4 py-3 hover:bg-brand-700 border-b border-brand-700" data-key="nav_home">Home</a>
-            <a href="#tarakash" class="block px-4 py-3 hover:bg-brand-700 border-b border-brand-700" data-key="nav_gallery">Tarakash 1.0</a>
+            <a href="#schedules" class="block px-4 py-3 hover:bg-brand-700 border-b border-brand-700" data-key="nav_schedules">Festival Schedules</a>
+            <a href="#student-corner" class="block px-4 py-3 hover:bg-brand-700 border-b border-brand-700" data-key="nav_student_corner">Student Corner</a>
+            <a href="tarakash.html" class="block px-4 py-3 hover:bg-brand-700 border-b border-brand-700" data-key="nav_gallery">Tarakash 1.0</a>
             <a href="#contact" class="block px-4 py-3 hover:bg-brand-700" data-key="nav_contact">Contact</a>
         </div>
     </nav>
 
     <!-- News Ticker -->
-    <div class="bg-brand-50 border-b border-brand-200">
+    <div class="bg-brand-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto flex items-center">
             <div class="bg-brand-700 text-white px-4 py-2 text-sm font-bold uppercase tracking-wide flex-shrink-0 z-10 shadow-md" data-key="latest_updates">
                 Latest Updates
             </div>
             <div class="flex-grow overflow-hidden relative h-9">
                 <div class="absolute whitespace-nowrap py-2 animate-[marquee_25s_linear_infinite] hover:[animation-play-state:paused] flex items-center space-x-8 text-sm text-brand-900 font-medium">
-                    <span class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span> <a href="https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/OrderEntry/MCBundi/2025/Recruitment_Related/O_131125_b9a5e212-8d13-4291-8ab8-de6a5c948087.pdf" target="_blank" class="hover:underline font-bold text-brand-800" data-key="news_recruitment">New Recruitment Order Released. Click to View.</a></span>
-                    <span class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span> <a href="https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/Tender/26356_Main_160cd830-79b9-4167-891b-ca6f091520a8.pdf" target="_blank" class="hover:underline font-bold text-brand-800" data-key="news_tender">New Tender Notification Released. Click to Download.</a></span>
+                    <span class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>Welcome to the official website of Bundi Medical Student Association (BMSA).</span>
+                    <span class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span><span data-key="news_tarakash">Tarakash 2.0 - Annual Festival dates coming soon!</span></span>
                 </div>
             </div>
         </div>
@@ -329,7 +339,7 @@
     <!-- Dignitaries Section -->
     <div class="bg-white border-b border-slate-200 shadow-sm relative z-10">
         <div class="max-w-7xl mx-auto px-4 py-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <!-- Principal -->
                 <div class="flex flex-col items-center text-center group">
                     <div class="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden border-4 border-slate-100 shadow-md mb-3 group-hover:border-brand-200 transition-colors duration-300">
@@ -337,8 +347,8 @@
                              alt="Principal" 
                              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_principal_name">Dr. Shyoji Ram Meena</h3>
-                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="dig_principal_title">Principal & Controller</p>
+                    <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="princ_name">Dr. Shyoji Ram Meena</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="princ_title">Principal & Controller</p>
                 </div>
 
                 <!-- Welfare Incharge -->
@@ -366,12 +376,34 @@
                 <!-- Academic Incharge -->
                 <div class="flex flex-col items-center text-center group">
                     <div class="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden border-4 border-slate-100 shadow-md mb-3 group-hover:border-brand-200 transition-colors duration-300">
-                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" 
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/tger45t.jpg" 
                              alt="Academic Incharge" 
                              class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_academic_name">Dr. Gaurav Parashar</h3>
                     <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="dig_academic_title">Academic Incharge</p>
+                </div>
+
+                <!-- Cultural Incharge -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden border-4 border-slate-100 shadow-md mb-3 group-hover:border-brand-200 transition-colors duration-300">
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/WhatsApp%20Image%202026-02-10%20at%2011.52.33%20PM.jpeg" 
+                             alt="Cultural Incharge" 
+                             class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_cultural_incharge_name">Dr. Kamal Nayan Sharngi</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="dig_cultural_incharge_title">Cultural Incharge</p>
+                </div>
+
+                <!-- Cultural Secretary -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden border-4 border-slate-100 shadow-md mb-3 group-hover:border-brand-200 transition-colors duration-300">
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/WhatsApp%20Image%202026-02-10%20at%2011.52.33%20PM%20(1).jpeg" 
+                             alt="Cultural Secretary" 
+                             class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-brand-900 leading-tight mb-1" data-key="dig_cultural_sec_name">Dr. Divya Khandelwal</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide" data-key="dig_cultural_sec_title">Cultural Secretary</p>
                 </div>
             </div>
         </div>
@@ -448,17 +480,6 @@
                         <div class="w-full">
                             <h3 class="text-2xl font-serif font-bold text-brand-900 mb-2" data-key="welcome_title">Welcome to BMSA</h3>
                             <div class="w-16 h-1 bg-brand-gold mb-6"></div>
-                            <p class="text-slate-600 leading-relaxed mb-4 text-justify" data-key="welcome_text_1">
-                                <span class="text-3xl float-left mr-2 font-serif text-brand-300 font-bold">"</span>
-                                Bundi Medical Student Association of Government Medical College Bundi is a premier institution established with the vision of bridging the gap in healthcare services and medical education. Affiliated with the <strong>Rajasthan University of Health Sciences</strong> and approved by the NMC, we are committed to academic excellence and holistic student development.
-                            </p>
-                            <p class="text-slate-600 leading-relaxed text-justify mb-6" data-key="welcome_text_2">
-                                Our campus is equipped with modern infrastructure, advanced laboratories, and a teaching hospital that serves the community. We strive to produce competent medical professionals who are ethical, compassionate, and skilled in serving humanity.
-                            </p>
-                            <div class="flex gap-4">
-                                <a href="#departments" class="px-5 py-2 bg-slate-100 text-brand-800 rounded font-semibold text-sm hover:bg-slate-200 transition" data-key="btn_read_msg">Read Full Message</a>
-                                <a href="#departments" class="px-5 py-2 bg-brand-50 text-brand-600 rounded font-semibold text-sm hover:bg-brand-100 transition" data-key="btn_view_dept">View Departments</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -476,11 +497,11 @@
                         <h4 class="font-bold text-lg text-brand-800 mt-4">Introduction</h4>
                         <p class="mb-4">This is the constitution for the student executive committee for students of government medical college Bundi named as Bundi medical students association.</p>
 
-                        <h4 class="font-bold text-lg text-brand-800 mt-4">Article I: Name</h4>
+                        <h4 class="font-bold text-lg text-brand-800 mt-4">Name</h4>
                         <p class="mb-4">The Union shall be called “Bundi Medical Students Association, Government Medical College Bundi” ,with the Dean of the GMC as the Patron.<br>
                         For all intents and purposes, the student body shall henceforth be referred to as BMSA in the constitution and “Government Medical College Bundi” as the institute.</p>
 
-                        <h4 class="font-bold text-lg text-brand-800 mt-4">Article II: Aims and Objectives</h4>
+                        <h4 class="font-bold text-lg text-brand-800 mt-4">Aims and Objectives</h4>
                         <p class="mb-2">The Union shall endeavour to foster a spirit of cooperation and comradeship among the members and to promote their social, cultural, athletic, literary and scientific activities.</p>
                         <ul class="list-disc pl-5 space-y-2">
                             <li>The BMSA shall strive to live up to the important role students have to play in the development and progress of the institute.</li>
@@ -513,184 +534,189 @@
                     </div>
                 </div>
 
-                <!-- Committees Section (New) -->
+                <!-- Committees Section -->
                 <div id="committees">
                     <div class="flex items-center justify-between mb-6">
                         <h3 class="text-xl font-bold text-brand-900 border-l-4 border-brand-600 pl-3" data-key="committee_title">BMSA Committees</h3>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        <a href="https://gmcbundi.dpdns.org/committees/cultural" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_cultural">Cultural Committee</span>
-                        </div>
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        </a>
+                        <a href="https://gmcbundi.dpdns.org/committees/sports" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-2 group-hover:bg-green-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_sports">Sports Committee</span>
-                        </div>
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        </a>
+                        <a href="https://gmcbundi.dpdns.org/committees/it-cinema" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-2 group-hover:bg-blue-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                             </div>
-                            <span class="text-sm font-bold text-brand-900" data-key="comm_id">ID & Cinema Committee</span>
-                        </div>
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                            <span class="text-sm font-bold text-brand-900" data-key="comm_id">IT & Cinema Committee</span>
+                        </a>
+                        <a href="https://gmcbundi.dpdns.org/committees/literature" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center mb-2 group-hover:bg-yellow-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_lit">Literature Committee</span>
-                        </div>
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        </a>
+                        <a href="https://gmcbundi.dpdns.org/committees/arts-craft" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center mb-2 group-hover:bg-pink-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.357a4 4 0 014.114 0l1.657 1.357M11 7.343l-1.657 1.357a4 4 0 01-4.114 0L3.57 7.343M11 7.343v6.172a2 2 0 002 2h3a2 2 0 002-2v-6.172"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_art">Arts & Craft Committee</span>
-                        </div>
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        </a>
+                        <a href="https://gmcbundi.dpdns.org/committees/finance" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mb-2 group-hover:bg-indigo-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_finance">Finance Committee</span>
-                        </div>
-                         <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        </a>
+                         <a href="https://gmcbundi.dpdns.org/committees/disciplinary" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_disciplinary">Disciplinary Committee</span>
-                        </div>
-                        <div class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition">
+                        </a>
+                        <a href="https://gmcbundi.dpdns.org/committees/mess" class="bg-white p-4 rounded shadow-sm hover:shadow-md border border-slate-100 text-center flex flex-col items-center group cursor-pointer transition block">
                             <div class="w-12 h-12 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-2 group-hover:bg-orange-600 group-hover:text-white transition">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                             </div>
                             <span class="text-sm font-bold text-brand-900" data-key="comm_mess">Mess Committee</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Tarakash 1.0 (Gallery Grid) -->
-                <div id="tarakash">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold text-brand-900 border-l-4 border-brand-600 pl-3" data-key="tarakash_title">Tarakash 1.0 - Annual Festival</h3>
+                <!-- Student Houses Section -->
+                <div id="student-houses" class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 mt-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-brand-900 border-l-4 border-brand-600 pl-3">Student Houses</h3>
                     </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <p class="text-slate-600 text-sm mb-4">
+                        To promote physical and mental development and maintain a healthy competitive environment, all students have been divided into four houses by the Sports Committee.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-3 bg-red-50 border border-red-100 rounded text-center">
+                            <h4 class="font-bold text-red-700">1. Flaming Falcons</h4>
+                        </div>
+                        <div class="p-3 bg-green-50 border border-green-100 rounded text-center">
+                            <h4 class="font-bold text-green-700">2. Godzilla Guardians</h4>
+                        </div>
+                        <div class="p-3 bg-blue-50 border border-blue-100 rounded text-center">
+                            <h4 class="font-bold text-blue-700">3. Hydra Havocs</h4>
+                        </div>
+                        <div class="p-3 bg-purple-50 border border-purple-100 rounded text-center">
+                            <h4 class="font-bold text-purple-700">4. Kraken Knights</h4>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="https://gmcbundi.dpdns.org/Tarakash/" class="text-sm text-brand-600 font-bold hover:underline">View Team Lists & Captains →</a>
+                    </div>
+                </div>
+
+                <!-- Festival Schedules Section -->
+                <div id="schedules" class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 mt-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-brand-900 border-l-4 border-brand-600 pl-3" data-key="schedules_title">Festival Schedules</h3>
+                    </div>
+                    <div class="bg-brand-50 p-8 rounded border border-brand-100 text-center">
+                        <svg class="w-12 h-12 text-brand-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <p class="text-slate-800 font-bold text-lg mb-1" data-key="schedules_tarakash_2">Tarakash 2.0 - Annual Festival</p>
+                        <p class="text-slate-600 font-medium" data-key="schedules_empty">Dates coming soon! Keep checking for updates.</p>
+                    </div>
+                </div>
+
+                <!-- Student Corner & Tarakash Gallery -->
+                <div id="student-corner" class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 mt-8">
+                    <!-- Main Header -->
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-brand-900 border-l-4 border-brand-600 pl-3" data-key="student_corner_title">Student Corner</h2>
+                    </div>
+                    
+                    <!-- Tarakash Sub-Header & Button -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+                        <h3 class="text-xl font-bold text-brand-800 border-l-4 border-brand-600 pl-3" data-key="tarakash_title">Tarakash 1.0 - Annual Festival</h3>
+                        
+                        <a href="https://www.instagram.com/taraksh.gmcbundi/?hl=en" target="_blank" class="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-bold hover:bg-pink-200 transition shadow-sm border border-pink-200">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            Festival Instagram
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         <!-- Image Batch 1 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0042.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0042.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0046.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0046.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0049.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0049.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0054.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0054.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
                         
                         <!-- Image Batch 2 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0056.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0056.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0059.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0064.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0061.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0066.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0064.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0069.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
 
                         <!-- Image Batch 3 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0066.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0075.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0069.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0087.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0072.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0090.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0075.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0096.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
 
                         <!-- Image Batch 4 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0078.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0099.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0087.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0102.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0090.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0105.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0093.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-
-                        <!-- Image Batch 5 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0096.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0099.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0102.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0105.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-
-                         <!-- Image Batch 6 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0108.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0111.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0112.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0114.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        
-                         <!-- Image Batch 7 -->
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0115.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-40 overflow-hidden rounded shadow-sm group cursor-pointer relative">
-                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/IMG-20260201-WA0118.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
+                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                            <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0111.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.src)">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
                         </div>
                     </div>
@@ -710,17 +736,26 @@
                     </div>
                     <div class="h-[450px] overflow-hidden relative">
                         <div class="p-4 space-y-3 animate-scroll-up notice-board-scroll">
-                            <!-- Existing Recent Links -->
-                            <a href="https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/OrderEntry/MCBundi/2025/Recruitment_Related/O_131125_b9a5e212-8d13-4291-8ab8-de6a5c948087.pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-blue-500">
-                                <span class="text-xs text-blue-600 font-bold font-mono uppercase">13 Nov 2025</span>
-                                <p class="text-sm font-medium text-slate-800 group-hover:text-brand-700 mt-1">Recruitment Order (Ref: O_131125)</p>
+                            
+                            <!-- DC Members Notice -->
+                            <a href="https://gmcbundi.dpdns.org/DC%20member.pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-red-500">
+                                <span class="text-xs text-red-600 font-bold font-mono uppercase">Important</span>
+                                <p class="text-sm font-medium text-slate-800 group-hover:text-brand-700 mt-1">Announcement of Disciplinary Committee (DC) Members List</p>
+                                <span class="text-[10px] text-slate-400 font-bold block mt-1">Click to view PDF →</span>
                             </a>
-                            <!-- ... content abbreviated, kept as is ... -->
-                             <!-- ... -->
-                            <a href="https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/OrderEntry/Revenue/2021/Notification/O_170521_be30433e-be87-45fa-b604-15cb0e3175c3.pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-slate-400">
-                                <span class="text-xs text-slate-500 font-mono">17 May 2021</span>
-                                <p class="text-sm font-medium text-slate-800 group-hover:text-brand-700 mt-1">Revenue Notification Archive</p>
+
+                            <!-- Office Order Notice -->
+                            <a href="https://gmcbundi.dpdns.org/%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF,%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%95%E0%A5%80%E0%A4%AF%20%E0%A4%86%E0%A4%AF%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF,%20%E0%A4%AC%E0%A5%82%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80%20(%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8).pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-brand-600">
+                                <span class="text-xs text-brand-600 font-bold font-mono uppercase">Order</span>
+                                <p class="text-sm font-medium text-slate-800 group-hover:text-brand-700 mt-1">कार्यालय प्रधानाचार्य, राजकीय आयुर्विज्ञान महाविद्यालय, बूंदी (राजस्थान) - कार्यालय आदेश</p>
+                                <span class="text-[10px] text-slate-400 font-bold block mt-1">Click to view PDF →</span>
                             </a>
+
+                            <div class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-brand-500">
+                                <span class="text-xs text-brand-600 font-bold font-mono uppercase">Update</span>
+                                <p class="text-sm font-medium text-slate-800 group-hover:text-brand-700 mt-1">Welcome to the BMSA Portal. Check here for latest notices and updates.</p>
+                            </div>
+
                         </div>
                     </div>
                     <div class="p-2 bg-slate-100 text-center border-t border-slate-200">
@@ -728,21 +763,31 @@
                     </div>
                 </div>
 
-                <!-- Quick Links Box -->
-                <div class="bg-brand-900 rounded-lg shadow-md p-6 text-white">
+                <!-- Quick Links Box (Sidebar) -->
+                <div id="sidebar-quick-links" class="bg-brand-900 rounded-lg shadow-md p-6 text-white">
                     <h3 class="font-bold text-lg mb-4 border-b border-brand-700 pb-2" data-key="student_corner">Student Corner</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="https://ruhsraj.org.in/Ruhsstudent/index" target="_blank" class="flex items-center hover:text-brand-300 transition border-b border-brand-800 pb-2"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> <span data-key="link_panel">RUHS Student Panel</span></a></li>
                         <li><a href="https://results.ruhsraj.org/" target="_blank" class="flex items-center hover:text-brand-300 transition border-b border-brand-800 pb-2"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> <span data-key="link_results">Exam Results</span></a></li>
                         <li><a href="#committees" class="flex items-center hover:text-brand-300 transition border-b border-brand-800 pb-2"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg> <span data-key="link_committees">Committees</span></a></li>
-                        <li><a href="#tarakash" class="flex items-center hover:text-brand-300 transition font-medium"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> <span data-key="link_festivals">Tarakash 1.0</span></a></li>
+                        
+                        <!-- Highlighted Associated Functions Link -->
+                        <li class="mt-6 pt-2">
+                            <a href="https://gmcbundi.dpdns.org/AssociatedFunctions/" class="relative flex items-center justify-center w-full bg-gradient-to-r from-yellow-500 to-brand-gold text-brand-900 font-bold py-3 px-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl hover:from-yellow-400 hover:to-yellow-500 group overflow-hidden">
+                                <!-- Shine Effect -->
+                                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shine"></div>
+                                
+                                <svg class="w-5 h-5 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span data-key="link_festivals">Associated Functions</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Social Connect Section (Replaces Mandatory Disclosure) -->
+    <!-- Social Connect Section -->
     <section id="social" class="py-12 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-2xl font-serif font-bold text-brand-900 mb-8 flex items-center justify-center">
@@ -751,8 +796,8 @@
                 <span class="w-8 h-1 bg-brand-600 ml-3"></span>
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <!-- GMC Bundi Official -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Social cards remain same as previous -->
                 <a href="https://www.instagram.com/gmc.bundi/?hl=en" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-slate-200 group flex flex-col items-center">
                     <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mb-3 group-hover:shadow-md transition-all">
                         <svg class="w-8 h-8" fill="url(#instagramGradient)" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -762,7 +807,6 @@
                     <span class="mt-4 text-xs font-bold text-brand-600 uppercase tracking-wide group-hover:underline">Follow Page</span>
                 </a>
 
-                <!-- BMSA Official -->
                 <a href="https://www.instagram.com/bmsa.gmcbundi/?hl=en" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-slate-200 group flex flex-col items-center">
                     <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mb-3 group-hover:shadow-md transition-all">
                         <svg class="w-8 h-8" fill="url(#instagramGradient)" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -772,13 +816,21 @@
                     <span class="mt-4 text-xs font-bold text-brand-600 uppercase tracking-wide group-hover:underline">Follow Page</span>
                 </a>
 
-                 <!-- Events -->
                 <a href="https://www.instagram.com/gmcbevents/?hl=en" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-slate-200 group flex flex-col items-center">
                     <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mb-3 group-hover:shadow-md transition-all">
                         <svg class="w-8 h-8" fill="url(#instagramGradient)" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </div>
                     <h3 class="font-bold text-lg text-slate-800 mb-1">GMCB Events</h3>
                     <p class="text-sm text-slate-500 font-medium">@gmcbevents</p>
+                    <span class="mt-4 text-xs font-bold text-brand-600 uppercase tracking-wide group-hover:underline">Follow Page</span>
+                </a>
+
+                <a href="https://www.instagram.com/taraksh.gmcbundi/?hl=en" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-slate-200 group flex flex-col items-center">
+                    <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mb-3 group-hover:shadow-md transition-all">
+                        <svg class="w-8 h-8" fill="url(#instagramGradient)" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-1">Taraksh 1.0</h3>
+                    <p class="text-sm text-slate-500 font-medium">@taraksh.gmcbundi</p>
                     <span class="mt-4 text-xs font-bold text-brand-600 uppercase tracking-wide group-hover:underline">Follow Page</span>
                 </a>
             </div>
@@ -804,25 +856,18 @@
                     <h4 class="font-bold text-base mb-4 uppercase tracking-wider text-brand-gold" data-key="footer_contact">Contact & Map</h4>
                     <p class="text-sm text-brand-100 mb-2">3 Talab Gaon, Bundi, Rajasthan - 323001</p>
                     
-                    <div class="mb-3 pt-2 border-t border-brand-800">
-                        <p class="text-sm text-brand-100"><strong class="text-white" data-key="footer_pres">Vinit Choudhury</strong> <span class="text-xs opacity-75" data-key="footer_pres_title">(President)</span></p>
-                        <p class="text-sm text-brand-100"><strong class="text-white" data-key="footer_vp">Utkarsh Shukla</strong> <span class="text-xs opacity-75" data-key="footer_vp_title">(Vice President)</span></p>
-                        <p class="text-sm text-brand-100"><strong class="text-white" data-key="footer_sec">Manish Kumar Meena</strong> <span class="text-xs opacity-75" data-key="footer_sec_title">(General Secretary)</span></p>
+                    <div class="mb-3 pt-2 border-t border-brand-800 space-y-1">
+                        <p class="text-sm text-brand-100"><strong class="text-white">Vinit Choudhury</strong> <span class="text-xs opacity-75">(President)</span></p>
+                        <p class="text-sm text-brand-100"><strong class="text-white">Utkarsh Shukla</strong> <span class="text-xs opacity-75">(Vice President)</span></p>
+                        <p class="text-sm text-brand-100"><strong class="text-white">Manish Kumar Meena</strong> <span class="text-xs opacity-75">(General Secretary)</span></p>
                     </div>
 
                     <p class="text-sm text-brand-100 mb-1">Email: <a href="mailto:studentsgmcbundi@gmail.com" class="hover:text-white">studentsgmcbundi@gmail.com</a></p>
                     <p class="text-sm text-brand-100 mb-2">Email: <a href="mailto:bmsa.gmcbundi@gmail.com" class="hover:text-white">bmsa.gmcbundi@gmail.com</a></p>
                     <p class="text-sm text-brand-100 mb-4">Phone: +91 83025 52028</p>
-                    <p class="text-sm text-brand-100 mb-4">
-                        <a href="https://www.instagram.com/bmsa.gmcbundi/?hl=en" target="_blank" class="flex items-center hover:opacity-80 transition">
-                            <svg class="w-4 h-4 mr-2" fill="url(#instagramGradient)" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            Follow us on Instagram
-                        </a>
-                    </p>
                     
-                    <!-- Google Map Embed -->
-                    <div class="w-full h-32 bg-slate-200 rounded overflow-hidden shadow-inner">
-                        <iframe src="https://maps.google.com/maps?q=Government+Medical+College+Bundi+323001&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="w-full h-48 bg-slate-200 rounded overflow-hidden shadow-inner border border-brand-700/50">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.376662706342!2d75.63229607516766!3d25.32555557762744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9b4070a31181%3A0xc4873111b1585860!2sGovernment%20Medical%20College%20Bundi!5e0!3m2!1sen!2sin!4v1709400000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
@@ -831,8 +876,8 @@
                     <ul class="text-sm space-y-2 text-brand-100">
                         <li><a href="#home" class="hover:text-white" data-key="nav_home">Home</a></li>
                         <li><a href="#about" class="hover:text-white" data-key="nav_about">About Us</a></li>
-                        <li><a href="https://medicaleducation.rajasthan.gov.in/mcbundi/#/home/dptHome" class="hover:text-white" data-key="footer_link_official">Official Portal</a></li>
-                        <li><a href="https://medicaleducation.rajasthan.gov.in/mcbundi/#/home/dptHome" class="hover:text-white" data-key="footer_link_attend">GMC Main Website</a></li>
+                        <li><a href="https://gmcbundi.dpdns.org/bmsa" target="_blank" class="hover:text-white" data-key="footer_link_feedback">Feedback</a></li>
+                        <li><a href="https://medicaleducation.rajasthan.gov.in/mcbundi/#/home/dptHome" class="hover:text-white" data-key="footer_link_gmc_main">GMC Main Website</a></li>
                     </ul>
                 </div>
 
@@ -845,9 +890,10 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="border-t border-brand-800 pt-6 text-center text-xs text-brand-400">
                 <p class="mb-2" data-key="copyright">&copy; 2025 Bundi Medical Student Association of Government Medical College Bundi. All Rights Reserved.</p>
-                <p data-key="website_contact">For any changes in this website contact: <a href="mailto:kanishkdevatwal@yahoo.com" class="hover:text-white underline transition">kanishkdevatwal@yahoo.com</a></p>
+                <p data-key="website_contact">For any changes in this website contact: <a href="mailto:studentsgmcbundi@gmail.com" class="hover:text-white underline transition">studentsgmcbundi@gmail.com</a></p>
             </div>
         </div>
     </footer>
@@ -861,7 +907,6 @@
     </div>
 
     <script>
-        // Translations Data
         const translations = {
             en: {
                 skip_content: "Skip to Main Content",
@@ -869,36 +914,28 @@
                 univ_name: "Rajasthan University of Health Sciences (RUHS)",
                 nav_home: "Home",
                 nav_about: "About Us",
-                nav_dept: "Departments",
                 nav_committees: "Committees",
+                nav_schedules: "Festival Schedules",
+                nav_student_corner: "Student Corner",
                 nav_gallery: "Tarakash 1.0",
                 nav_facilities: "Facilities",
                 nav_contact: "Contact",
                 nmc_login: "GMC Main Website",
                 latest_updates: "Latest Updates",
-                news_recruitment: "New Recruitment Order Released. Click to View.",
-                news_tender: "New Tender Notification Released. Click to Download.",
-                hero_tag: "Excellence in Healthcare",
-                hero_title: "Empowering Future<br>Medical Leaders",
+                news_tarakash: "Tarakash 2.0 - Annual Festival dates coming soon!",
                 hero_voice: "A Voice For Medical Excellence",
-                btn_explore: "Explore Campus",
-                btn_contact: "Contact Us",
-                quick_admissions: "Admissions",
-                quick_apply: "Apply Now",
-                quick_students: "Students",
-                quick_results: "Results",
-                quick_procurement: "Procurement",
-                quick_tenders: "Tenders",
-                quick_faculty: "Faculty",
-                quick_recruitment: "Recruitment",
-                dig_principal_name: "Dr. Shyoji Ram Meena",
-                dig_principal_title: "Principal & Controller",
+                princ_name: "Dr. Shyoji Ram Meena",
+                princ_title: "Principal & Controller",
                 dig_welfare_name: "Dr. Vijay Nayak",
                 dig_welfare_title: "Welfare Committee Incharge",
                 dig_sports_name: "Dr. Mithlesh Meena",
                 dig_sports_title: "Sports Incharge",
                 dig_academic_name: "Dr. Gaurav Parashar",
                 dig_academic_title: "Academic Incharge",
+                dig_cultural_incharge_name: "Dr. Kamal Nayan Sharngi",
+                dig_cultural_incharge_title: "Cultural Incharge",
+                dig_cultural_sec_name: "Dr. Divya Khandelwal",
+                dig_cultural_sec_title: "Cultural Secretary",
                 bmsa_council_title: "BMSA Executive Council",
                 bmsa_pres_name_card: "Vinit Choudhury",
                 bmsa_pres_title_card: "President",
@@ -906,15 +943,7 @@
                 bmsa_vp_title_card: "Vice President",
                 bmsa_sec_name_card: "Manish Kumar Meena",
                 bmsa_sec_title_card: "General Secretary",
-                princ_name: "Dr. Shyoji Ram Meena",
-                princ_title: "Principal & Controller",
-                princ_dept: "Professor, Dept. of General Medicine",
-                princ_college: "Bundi Medical Student Association of Government Medical College Bundi",
                 welcome_title: "Welcome to BMSA",
-                welcome_text_1: "<span class=\"text-3xl float-left mr-2 font-serif text-brand-300 font-bold\">\"</span>Bundi Medical Student Association of Government Medical College Bundi is a premier institution established with the vision of bridging the gap in healthcare services and medical education. Affiliated with the <strong>Rajasthan University of Health Sciences</strong> and approved by the NMC, we are committed to academic excellence and holistic student development.",
-                welcome_text_2: "Our campus is equipped with modern infrastructure, advanced laboratories, and a teaching hospital that serves the community. We strive to produce competent medical professionals who are ethical, compassionate, and skilled in serving humanity.",
-                btn_read_msg: "Read Full Message",
-                btn_view_dept: "View Departments",
                 stat_students: "Total Students",
                 stat_bmsa_members: "BMSA Members",
                 stat_executives: "Executive Members",
@@ -922,38 +951,34 @@
                 committee_title: "BMSA Committees",
                 comm_cultural: "Cultural Committee",
                 comm_sports: "Sports Committee",
-                comm_id: "ID & Cinema Committee",
+                comm_id: "IT & Cinema Committee",
                 comm_lit: "Literature Committee",
                 comm_art: "Arts & Craft Committee",
                 comm_finance: "Finance Committee",
                 comm_disciplinary: "Disciplinary Committee",
                 comm_mess: "Mess Committee",
+                schedules_title: "Festival Schedules",
+                schedules_tarakash_2: "Tarakash 2.0 - Annual Festival",
+                schedules_empty: "Dates coming soon! Keep checking for updates.",
+                student_corner_title: "Student Corner",
                 tarakash_title: "Tarakash 1.0 - Annual Festival",
-                view_gallery: "View Gallery",
+                social_title: "Connect With Us",
                 notice_board: "Notice Board",
                 notice_new: "New",
                 view_archive: "View Archive",
-                student_corner: "Student Corner",
                 link_panel: "RUHS Student Panel",
                 link_results: "Exam Results",
                 link_committees: "Committees",
-                link_festivals: "Tarakash 1.0",
-                social_title: "Connect With Us",
+                link_festivals: "Associated Functions",
                 footer_desc: "Bundi Medical Student Association of Government Medical College Bundi, Rajasthan.",
                 footer_contact: "Contact & Map",
-                footer_pres: "Vinit Choudhury",
-                footer_pres_title: "(President)",
-                footer_vp: "Utkarsh Shukla",
-                footer_vp_title: "(Vice President)",
-                footer_sec: "Manish Kumar Meena",
-                footer_sec_title: "(General Secretary)",
                 footer_quick: "Quick Links",
                 footer_ext: "External Links",
-                footer_link_official: "Official Portal",
-                footer_link_attend: "GMC Main Website",
+                footer_link_feedback: "Feedback",
+                footer_link_gmc_main: "GMC Main Website",
                 footer_link_dme: "DME Rajasthan",
                 copyright: "&copy; 2025 Bundi Medical Student Association of Government Medical College Bundi. All Rights Reserved.",
-                website_contact: "For any changes in this website contact: <a href='mailto:kanishkdevatwal@yahoo.com' class='hover:text-white underline transition'>kanishkdevatwal@yahoo.com</a>"
+                website_contact: "For any changes in this website contact: <a href='mailto:studentsgmcbundi@gmail.com' class='hover:text-white underline transition'>studentsgmcbundi@gmail.com</a>"
             },
             hi: {
                 skip_content: "मुख्य सामग्री पर जाएं",
@@ -961,36 +986,28 @@
                 univ_name: "राजस्थान स्वास्थ्य विज्ञान विश्वविद्यालय (RUHS)",
                 nav_home: "मुख्य पृष्ठ",
                 nav_about: "हमारे बारे में",
-                nav_dept: "विभाग",
                 nav_committees: "समितियां",
+                nav_schedules: "त्योहार कार्यक्रम",
+                nav_student_corner: "छात्र कोना",
                 nav_gallery: "तरकश 1.0",
                 nav_facilities: "सुविधाएं",
                 nav_contact: "संपर्क",
-                nmc_login: "जीएमसी मुख्य वेबसाइट",
+                nmc_login: "GMC मुख्य वेबसाइट",
                 latest_updates: "नवीनतम अपडेट",
-                news_recruitment: "नई भर्ती आदेश जारी। देखने के लिए क्लिक करें।",
-                news_tender: "नई निविदा अधिसूचना जारी। डाउनलोड करने के लिए क्लिक करें।",
-                hero_tag: "स्वास्थ्य सेवा में उत्कृष्टता",
-                hero_title: "भविष्य के चिकित्सा<br>नेताओं को सशक्त बनाना",
+                news_tarakash: "तरकश 2.0 - वार्षिक उत्सव की तारीखें जल्द आ रही हैं!",
                 hero_voice: "चिकित्सा उत्कृष्टता के लिए एक आवाज़",
-                btn_explore: "परिसर देखें",
-                btn_contact: "संपर्क करें",
-                quick_admissions: "प्रवेश",
-                quick_apply: "अभी आवेदन करें",
-                quick_students: "छात्र",
-                quick_results: "परिणाम",
-                quick_procurement: "खरीद",
-                quick_tenders: "निविदाएं",
-                quick_faculty: "संकाय",
-                quick_recruitment: "भर्ती",
-                dig_principal_name: "डॉ. श्योजी राम मीणा",
-                dig_principal_title: "प्रधानाचार्य एवं नियंत्रक",
+                princ_name: "डॉ. श्योजी राम मीणा",
+                princ_title: "प्रधानाचार्य एवं नियंत्रक",
                 dig_welfare_name: "डॉ. विजय नायक",
                 dig_welfare_title: "कल्याण समिति प्रभारी",
                 dig_sports_name: "डॉ. मिथलेश मीणा",
                 dig_sports_title: "खेल प्रभारी",
                 dig_academic_name: "डॉ. गौरव पाराशर",
                 dig_academic_title: "शैक्षणिक प्रभारी",
+                dig_cultural_incharge_name: "डॉ. कमल नयन सारंगी",
+                dig_cultural_incharge_title: "सांस्कृतिक प्रभारी",
+                dig_cultural_sec_name: "डॉ. दिव्या खंडेलwal",
+                dig_cultural_sec_title: "सांस्कृतिक सचिव",
                 bmsa_council_title: "BMSA कार्यकारी परिषद",
                 bmsa_pres_name_card: "विनीत चौधरी",
                 bmsa_pres_title_card: "अध्यक्ष",
@@ -998,15 +1015,7 @@
                 bmsa_vp_title_card: "उपाध्यक्ष",
                 bmsa_sec_name_card: "मनीष कुमार मीणा",
                 bmsa_sec_title_card: "महासचिव",
-                princ_name: "डॉ. श्योजी राम मीणा",
-                princ_title: "प्रधानाचार्य एवं नियंत्रक",
-                princ_dept: "प्रोफेसर, जनरल मेडिसिन विभाग",
-                princ_college: "बूंदी मेडिकल स्टूडेंट एसोसिएशन, राजकीय मेडिकल कॉलेज बूंदी",
                 welcome_title: "BMSA में आपका स्वागत है",
-                welcome_text_1: "<span class=\"text-3xl float-left mr-2 font-serif text-brand-300 font-bold\">\"</span>बूंदी मेडिकल स्टूडेंट एसोसिएशन, राजकीय मेडिकल कॉलेज बूंदी एक प्रमुख संस्थान है जिसकी स्थापना स्वास्थ्य सेवाओं और चिकित्सा शिक्षा में अंतर को पाटने की दृष्टि से की गई है। <strong>राजस्थान स्वास्थ्य विज्ञान विश्वविद्यालय</strong> से संबद्ध और एनएमसी द्वारा अनुमोदित, हम शैक्षणिक उत्कृष्टता और समग्र छात्र विकास के लिए प्रतिबद्ध हैं।",
-                welcome_text_2: "हमारा परिसर आधुनिक बुनियादी ढांचे, उन्नत प्रयोगशालाओं और समुदाय की सेवा करने वाले एक शिक्षण अस्पताल से सुसज्जित है। हम सक्षम चिकित्सा पेशेवरों को तैयार करने का प्रयास करते हैं जो नैतिक, दयालु और मानवता की सेवा में कुशल हों।",
-                btn_read_msg: "पूरा संदेश पढ़ें",
-                btn_view_dept: "विभाग देखें",
                 stat_students: "कुल छात्र",
                 stat_bmsa_members: "BMSA सदस्य",
                 stat_executives: "कार्यकारी सदस्य",
@@ -1014,39 +1023,34 @@
                 committee_title: "BMSA समितियां",
                 comm_cultural: "सांस्कृतिक समिति",
                 comm_sports: "खेल समिति",
-                comm_id: "आईडी और सिनेमा समिति",
+                comm_id: "आईटी और सिनेमा समिति",
                 comm_lit: "साहित्य समिति",
                 comm_art: "कला और शिल्प समिति",
                 comm_finance: "वित्त समिति",
                 comm_disciplinary: "अनुशासन समिति",
                 comm_mess: "मेस समिति",
+                schedules_title: "उत्सव अनुसूची",
+                schedules_tarakash_2: "तरकश 2.0 - वार्षिक उत्सव",
+                schedules_empty: "तारीखें जल्द आ रही हैं! अपडेट के लिए देखते रहें।",
+                student_corner_title: "छात्र कोना",
                 tarakash_title: "तरकश 1.0 - वार्षिक उत्सव",
-                campus_life: "परिसर जीवन",
-                view_gallery: "गैलरी देखें",
+                social_title: "सोशल मीडिया पर जुड़ें",
                 notice_board: "सूचना पट्ट",
                 notice_new: "नया",
                 view_archive: "संग्रह देखें",
-                student_corner: "छात्र कोना",
                 link_panel: "RUHS छात्र पैनल",
                 link_results: "परीक्षा परिणाम",
                 link_committees: "समितियां",
-                link_festivals: "तरकश 1.0",
-                social_title: "सोशल मीडिया पर जुड़ें",
-                footer_desc: "बूंदी मेडिकल स्टूडेंट एसोसिएशन, राजकीय मेडिकल कॉलेज बूंदी, राजस्थान।",
+                link_festivals: "संबद्ध कार्य",
+                footer_desc: "राजकीय मेडिकल कॉलेज, बूंदी, राजस्थान।",
                 footer_contact: "संपर्क और मानचित्र",
-                footer_pres: "विनीत चौधरी",
-                footer_pres_title: "(अध्यक्ष)",
-                footer_vp: "उत्कर्ष शुक्ला",
-                footer_vp_title: "(उपाध्यक्ष)",
-                footer_sec: "मनीष कुमार मीणा",
-                footer_sec_title: "(महासचिव)",
                 footer_quick: "त्वरित लिंक",
                 footer_ext: "बाहरी लिंक",
-                footer_link_official: "आधिकारिक पोर्टल",
-                footer_link_attend: "जीएमसी मुख्य वेबसाइट",
+                footer_link_feedback: "प्रतिक्रिया",
+                footer_link_gmc_main: "GMC मुख्य वेबसाइट",
                 footer_link_dme: "डीएमई राजस्थान",
-                copyright: "&copy; 2025 बूंदी मेडिकल स्टूडेंट एसोसिएशन, राजकीय मेडिकल कॉलेज बूंदी। सर्वाधिकार सुरक्षित।",
-                website_contact: "इस वेबसाइट में किसी भी बदलाव के लिए संपर्क करें: <a href='mailto:kanishkdevatwal@yahoo.com' class='hover:text-white underline transition'>kanishkdevatwal@yahoo.com</a>"
+                copyright: "&copy; 2025 राजकीय मेडिकल कॉलेज, बूंदी। सर्वाधिकार सुरक्षित।",
+                website_contact: "इस वेबसाइट में किसी भी बदलाव के लिए संपर्क करें: <a href='mailto:studentsgmcbundi@gmail.com' class='hover:text-white underline transition'>studentsgmcbundi@gmail.com</a>"
             }
         };
 
@@ -1054,80 +1058,45 @@
 
         function toggleLanguage() {
             const toggleBtn = document.getElementById('lang-toggle');
-            
-            // Switch Language State
-            if (currentLang === 'en') {
-                currentLang = 'hi';
-                toggleBtn.innerText = 'English';
-            } else {
-                currentLang = 'en';
-                toggleBtn.innerText = 'हिंदी';
-            }
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            toggleBtn.innerText = currentLang === 'en' ? 'हिंदी' : 'English';
 
-            // Update all elements with data-key attribute
-            const elements = document.querySelectorAll('[data-key]');
-            elements.forEach(el => {
+            document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
-                if (translations[currentLang][key]) {
-                    el.innerHTML = translations[currentLang][key];
-                }
+                if (translations[currentLang][key]) el.innerHTML = translations[currentLang][key];
             });
         }
 
-        // Loading Animation Logic
         window.addEventListener('load', () => {
             const loader = document.getElementById('page-loader');
-            // Extended load time for full animation cycle (spin -> converge -> explode)
             setTimeout(() => {
                 loader.classList.add('opacity-0');
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 700);
+                setTimeout(() => loader.style.display = 'none', 700);
             }, 3800);
         });
 
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Hero Slider Logic
+        function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        
         const slides = document.querySelectorAll('.slide');
         let currentSlide = 0;
-
-        function nextSlide() {
+        setInterval(() => {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-        }
+        }, 4000);
 
-        // Change slide every 4 seconds
-        setInterval(nextSlide, 4000);
-
-        // Lightbox Functions
         function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
+            const lb = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
             img.src = src;
-            lightbox.classList.remove('hidden');
-            // Small delay to allow display:block to apply before opacity transition
-            setTimeout(() => {
-                lightbox.classList.remove('opacity-0');
-                img.classList.remove('scale-95');
-                img.classList.add('scale-100');
-            }, 10);
+            lb.classList.remove('hidden');
+            setTimeout(() => lb.classList.add('opacity-100'), 10);
         }
 
         function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            lightbox.classList.add('opacity-0');
-            img.classList.remove('scale-100');
-            img.classList.add('scale-95');
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-                img.src = '';
-            }, 300);
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('opacity-100');
+            setTimeout(() => lb.classList.add('hidden'), 300);
         }
     </script>
 </body>
