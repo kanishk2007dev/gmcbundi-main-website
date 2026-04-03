@@ -36,6 +36,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
+    <!-- Header -->
     <header class="bg-brand-900 text-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
@@ -58,7 +59,8 @@
         </div>
     </header>
 
-    <div class="relative bg-slate-900 py-24 overflow-hidden mb-12">
+    <!-- Hero Section -->
+    <div class="relative bg-slate-900 py-24 overflow-hidden">
         <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-brand-900/90 via-slate-900/80 to-brand-900/90"></div>
         <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
@@ -70,8 +72,91 @@
         </div>
     </div>
 
+    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 py-16 flex-grow w-full">
         
+        <!-- Teams Grid (Moved to top) -->
+        <div class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-900 inline-block border-b-4 border-brand-gold pb-1">The 4 Houses (2026)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Flaming Falcons -->
+                <div class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 w-full bg-black">
+                         <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM.jpeg" class="h-full w-full object-contain" alt="Flaming Falcons Logo">
+                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                             <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Flaming Falcons</h3>
+                         </div>
+                    </div>
+                    <div class="p-6 flex-grow bg-slate-50">
+                        <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
+                            <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
+                                <li class="font-bold text-red-700 border-b border-red-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Abhishek Ajmera</li>
+                               <li>Ankit yadav, Vishal sharma, Yash Kashyap, Bhavyavardhan singh, Virendra choudhary, Surendra khokhar, Praful Dhobi, Manish meena, Murlidhar yadav, Mahesh jorwal, Parishita Mina, Yogita yadav, Vinit choudhary, Saksham Mirdha, Khushi Tikania, Kavya Lodhi, Ankur Sharma, komal ameta, krishan Sharma, Vikash shyoran, Muskan Sevda, Sarita Kanwar, Prachi Sharma, PRIYA CHANDAK, Nikita yadav, Manish Verma, Ekanand lodhwal, Lipakshi Mehra, Shree kishan gehlot, Neha Sain, Abhishek Ajmera, Sara Jalori, Durgesh Dangi, Rigved puri goswami, Devesh Choudhary, Pranjal Jain, Megha gupta, Divya Sharma, Aras Khan, Lokesh kumar Gurjar, Darshan Sahu, Lal kishan Choudhary, Vikash Yadav, Pooja choudhary, Upasana meena, Bharti, Praveeen Purohit, Siddharth Deval, Sagar Sharma, Shyam Sundar, Shivang, Durgesh Charpota, Aman Chaudhary, Garvit Jorwal, Mayank Meena, Daksha Yogi, Anvesh Agarwal, Sarthak Yadav, Vasu Mittal, Mohit beniwal, Harshit sainger, Kanishk, Renu Choudhary, Hitisha Khinchi, Priyanka Yadav, Ailicia, Diksha Sharma, Ishikia khandelwal, Sakshi Meena, Rinku, Pragya Meena, Divya Paliwal, Aarti Mahicha, Akshara Meena, Samiksha Gupta</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Godzilla Guardians -->
+                <div class="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 w-full bg-black">
+                         <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Godzilla Guardians Logo">
+                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                             <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Godzilla Guardians</h3>
+                         </div>
+                    </div>
+                    <div class="p-6 flex-grow bg-slate-50">
+                        <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
+                            <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
+                                <li class="font-bold text-green-700 border-b border-green-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Dharmendra Jangid</li>
+                               <li>Himanshu, Bhavya Damor, Mohd Alwish Gouri, Deepak Jarewal, Himanshu gurjar, Vikas Garhwal, Samarth Inani, Rudra Purohit, Radheshyam verma, Rambalwan meena, Jayantilal ninama, Krishan Kumar, Uday Kumar, Gaurav Sharma, Deepanshi Purohit, Saijal tak, bhawana shekhawat, Meenal Verma, Sheeti Agrawal, Yogita Meena, riddhima jangid, Anushka Khandelwal, Suryansh Meena, Priya Malinda, Harsh sharma, Amit Sharma, Utkarsh shukla, Aarya Sharma, Nitesh Pradhan, Satish choudhary, Dharmendra jangid, Raj Goswami, Tarun dhakad, Arti yadav, Lavanya Rajan, Nikita verma, Gunjan agarwal, Mudita Mehra, Tushar sen, Aadil khan, Hariom verma, Saurabh Kumar Meena, Pooja meena, Jitendra Dangi, Shiv Bishnoi, Pawan Kumar, Suhani Tiwari, Meghna Gursahaney, Arpita Choudhary, Aditya veer gurjar, Aamna gouri, Daksh sharma, Manish nainiwal, Ajay verma, Irfan khan, Pradeep kumar dhakar, Anurag indauiya, Vedant khajja, Prakash kumar, Atharv patidar, Akshat gupta, Dinesh verma, Mahaveer meena, Harshita yadav, Manasvi dungarwal, Harshvi meena, Shivani mehra, Tanisha choudhary, Neelam choudhary, Payal choudhary, Bittu bansal, Bhavishka prajapati, Saniya khan, Dhapu choudhary</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hydra Havocs -->
+                <div class="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 w-full bg-black">
+                         <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Hydra Havocs Logo">
+                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                             <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Hydra Havocs</h3>
+                         </div>
+                    </div>
+                    <div class="p-6 flex-grow bg-slate-50">
+                        <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
+                            <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
+                                <li class="font-bold text-blue-700 border-b border-blue-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Ritik Labana</li>
+                               <li>Ritik Labana, Harshit Agarwal, Lakshya Goyal, Uday Maheshwari, Vaibhav Singh, Shreyansh Mundhra, Pramod Devasi, Chirag Garg, Naman Paharia, Vansh Vamaniya, Kuldeep Jonwal, Bharat Suthar, Manish Yadav, Kapil Jat, Vatsal Nama, Vikram Saini, Aaryan Vashishtha, Pankaj Gurjar, Prince Bhaskar, Vasu Somani, MD. Arib, Abhishek Tailor, Naman Khandelwal, Deepak Meena, Rohit Samoliya, Rohit Kumar, Abhay Singh, Bhumika Maheshwari, Kanishka Sharma, Anagha Parashar, Sukhveer Kaur, Pooja Chaudhary, Anisha Rahman, Ishita Rathod, Nikita Bijania, Shreya Shenoy, Aditi Mandusia, Ruchika Kumawat, Hardika Jain, Pooja Chaudhary, Priyal Paliwal, Nidhi Damor, Suruchi Sharma, Keerti Yadav, Gungun Yadav, Kumari HImanshi, Naresh Kumar, Shiv Jinjwadia, Vinod Chaudhary, Waqar Ahmed, Adit Gupta, Akshit chanwada, Deepak dewasi, Yash Kumar Choubey, Sanjay Pancholi, Rahul, Aarav Porwal, Sanjay Chauhan, Piyush, Mohammad Farhan Raza, Kishor Yadav, Maninder Verma, Pulkit Jhalani, Parth Mahaver, Mahesh Meena, Kuldeep Bairwa, Vaibhav, Aman Ansari, Aditya Jindal, Khushbu Kanwar, Vanshika Lalwani, Shreenidhi, Gunjan Pancholi, Gauri Varshney, Jahnavi, Jaahnvi Singh, Taniya Bhardwaj, Sakshi Sharma, Hemlata Dhakar, Gauri Jeengar, Vanshika Garg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kraken Knights -->
+                <div class="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 w-full bg-black">
+                         <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Kraken Knights Logo">
+                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                             <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Kraken Knights</h3>
+                         </div>
+                    </div>
+                    <div class="p-6 flex-grow bg-slate-50">
+                        <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
+                            <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
+                                <li class="font-bold text-purple-700 border-b border-purple-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Garvit Sharma</li>
+                               <li>Garvit Sharma, Ajay Nagar, Vikas Yadav, Aditya Mandusia, Aman Ansari, Aras Khan, Manoj Kumar, Adityaman Singh, Md. Akram, Devansh Singh, Himanshu Meena, Akshay Sankhla, Deepak Devasi, Deepak Jingonia, Vivek Meena, Pradyuman Singh, Bhanwar Singh, Aashish Ninama, Aaryan Sharma, Praveen Jani, Harshit Gupta, Neeraj Meena, Sameer Tak, Rahul Chittora, Naved Qureshi, Alwish Gauri, Garvit Verma, Nirmal Mali, Bharat Patel, Nousheen Khan, Khushi Rajbhanawat, Himanshi Meena, Suman Dhakad, Arshin, Komal Rathore, Pratyusha Singh, Padma Bishnoi, Mehvish Bano, Tanya Sharma, Priyanka Gothwal, Gunjan Saini, Sneha Mittal, Yukta Dantla, Jahnavi Jain, Kirti Mathur, Sonia, Priyanka Lalawat, Ishika Sharma, Shivanshu Upadhyay, Kishore Kumar, Yash Tambia, Naveen Kumar Sharma, Chetan Yadav, Anuj Puri, Nitul Choudhary, Lakshit Samariya, Krishna Gautam, Abhijeet Mina, Suresh Saini, Jaykaran Godara, Mohd Sameer Tak, Suresh Choudhary, Kismat Prajapat, Pratyaksh Jangid, Keshav Dodwariya, Promod Dewasi, Arshin Bahamni, Mohd Akram Silawat, Ashish Ninama, Himanshu Basethia, Tanya Sharma, Mokshaa, Girija Saini, Harshita Morwal, Kanishka, Vindhya Kabra, Muskan Saini, Anushka Shekhawat, Rigveda Jangid, Rajshree Meena, Cheshta Jagenia, Muskan Yadav, Nupur Choudhary</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Winners Section -->
         <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12 mb-20">
             <div class="text-center mb-10">
                 <span class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-widest mb-3 border border-brand-100">Hall of Fame</span>
@@ -79,7 +164,9 @@
                 <div class="w-24 h-1 bg-brand-gold mx-auto mt-4"></div>
             </div>
 
+            <!-- Official Document Header -->
             <div class="border-4 border-black mb-12 overflow-hidden text-sm bg-white font-sans shadow-sm">
+                <!-- Top Row: Logo & Title -->
                 <div class="flex flex-col md:flex-row items-center border-b-4 border-black p-4">
                     <div class="w-24 md:w-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6">
                         <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" alt="BMSA Logo" class="w-full object-contain">
@@ -92,6 +179,7 @@
                     </div>
                 </div>
                 
+                <!-- Second Row: Execs -->
                 <div class="grid grid-cols-1 md:grid-cols-3 divide-y-4 md:divide-y-0 md:divide-x-4 divide-black border-b-4 border-black bg-white text-center py-3">
                     <div class="py-1">
                         <p class="font-bold text-black text-base">Vinit Choudhary</p>
@@ -107,6 +195,7 @@
                     </div>
                 </div>
 
+                <!-- Third Row: Sports Committee -->
                 <div class="flex flex-col lg:flex-row divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-black bg-white">
                     <div class="lg:w-1/6 flex items-center justify-center p-4 font-bold text-lg text-center">
                         Sports<br>Committee
@@ -158,11 +247,13 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                 
+                <!-- Outdoor Games Column -->
                 <div class="space-y-8">
                     <h3 class="text-2xl font-bold text-brand-900 border-l-4 border-brand-gold pl-3 flex items-center">
                         <span class="bg-brand-50 text-brand-700 p-2 rounded-lg mr-3 shadow-sm">🏟️</span> Outdoor Games
                     </h3>
                     
+                    <!-- Cricket & Volleyball -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                             <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏏 Cricket (Boys)</h4></div>
@@ -181,6 +272,7 @@
                         </div>
                     </div>
 
+                    <!-- Kho Kho -->
                     <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                         <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏃 Kho-Kho</h4></div>
                         <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -203,10 +295,12 @@
                         </div>
                     </div>
 
+                    <!-- Athletics / Races -->
                     <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                         <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏅 Athletics (Races)</h4></div>
                         <div class="p-5 space-y-6">
                             
+                            <!-- 100m -->
                             <div>
                                 <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">100m Sprint</h5>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -225,6 +319,7 @@
                                 </div>
                             </div>
 
+                            <!-- 200m & 400m -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                                 <div>
                                     <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">200m Sprint</h5>
@@ -258,6 +353,7 @@
                                 </div>
                             </div>
 
+                            <!-- Relay -->
                             <div class="pt-2 border-t border-slate-200 mt-2">
                                 <h5 class="font-bold text-slate-700 mt-4 mb-3">Relay Race</h5>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -284,14 +380,17 @@
 
                 </div>
 
+                <!-- Indoor Games Column -->
                 <div class="space-y-8">
                     <h3 class="text-2xl font-bold text-brand-900 border-l-4 border-brand-gold pl-3 flex items-center">
                         <span class="bg-brand-50 text-brand-700 p-2 rounded-lg mr-3 shadow-sm">🏠</span> Indoor Games
                     </h3>
 
+                    <!-- Badminton -->
                     <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                         <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏸 Badminton</h4></div>
                         <div class="p-5 space-y-6">
+                            <!-- Singles -->
                             <div>
                                 <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Single Player Match</h5>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -310,6 +409,7 @@
                                 </div>
                             </div>
                             
+                            <!-- Doubles -->
                             <div>
                                 <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Double Player Match</h5>
                                 <div class="space-y-4">
@@ -334,9 +434,11 @@
                         </div>
                     </div>
 
+                    <!-- Table Tennis -->
                     <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                         <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏓 Table Tennis</h4></div>
                         <div class="p-5 space-y-6">
+                            <!-- Singles -->
                             <div>
                                 <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Single Player Match</h5>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -355,6 +457,7 @@
                                 </div>
                             </div>
                             
+                            <!-- Doubles -->
                             <div>
                                 <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Double Player Match</h5>
                                 <div class="space-y-4">
@@ -379,6 +482,7 @@
                         </div>
                     </div>
 
+                    <!-- Chess & Carrom Grid -->
                     <div class="space-y-8">
                         <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                             <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">♟️ Chess</h4></div>
@@ -401,6 +505,7 @@
                         <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                             <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🎯 Carrom</h4></div>
                             <div class="p-5 space-y-6">
+                                <!-- Singles -->
                                 <div>
                                     <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Single Player Match</h5>
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -419,6 +524,7 @@
                                     </div>
                                 </div>
                                 
+                                <!-- Doubles -->
                                 <div>
                                     <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Double Player Match</h5>
                                     <div class="space-y-4">
@@ -447,82 +553,6 @@
                 </div>
 
             </div>
-        </div>
-
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-brand-900 inline-block border-b-4 border-brand-gold pb-1">The 4 Houses (2026)</h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            
-            <div class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
-                <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM.jpeg" class="h-full w-full object-contain" alt="Flaming Falcons Logo">
-                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Flaming Falcons</h3>
-                     </div>
-                </div>
-                <div class="p-6 flex-grow bg-slate-50">
-                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
-                        <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
-                            <li class="font-bold text-red-700 border-b border-red-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Abhishek Ajmera</li>
-                           <li>Ankit yadav, Vishal sharma, Yash Kashyap, Bhavyavardhan singh, Virendra choudhary, Surendra khokhar, Praful Dhobi, Manish meena, Murlidhar yadav, Mahesh jorwal, Parishita Mina, Yogita yadav, Vinit choudhary, Saksham Mirdha, Khushi Tikania, Kavya Lodhi, Ankur Sharma, komal ameta, krishan Sharma, Vikash shyoran, Muskan Sevda, Sarita Kanwar, Prachi Sharma, PRIYA CHANDAK, Nikita yadav, Manish Verma, Ekanand lodhwal, Lipakshi Mehra, Shree kishan gehlot, Neha Sain, Abhishek Ajmera, Sara Jalori, Durgesh Dangi, Rigved puri goswami, Devesh Choudhary, Pranjal Jain, Megha gupta, Divya Sharma, Aras Khan, Lokesh kumar Gurjar, Darshan Sahu, Lal kishan Choudhary, Vikash Yadav, Pooja choudhary, Upasana meena, Bharti, Praveeen Purohit, Siddharth Deval, Sagar Sharma, Shyam Sundar, Shivang, Durgesh Charpota, Aman Chaudhary, Garvit Jorwal, Mayank Meena, Daksha Yogi, Anvesh Agarwal, Sarthak Yadav, Vasu Mittal, Mohit beniwal, Harshit sainger, Kanishk, Renu Choudhary, Hitisha Khinchi, Priyanka Yadav, Ailicia, Diksha Sharma, Ishikia khandelwal, Sakshi Meena, Rinku, Pragya Meena, Divya Paliwal, Aarti Mahicha, Akshara Meena, Samiksha Gupta</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
-                <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Godzilla Guardians Logo">
-                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Godzilla Guardians</h3>
-                     </div>
-                </div>
-                <div class="p-6 flex-grow bg-slate-50">
-                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
-                        <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
-                            <li class="font-bold text-green-700 border-b border-green-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Dharmendra Jangid</li>
-                           <li>Himanshu, Bhavya Damor, Mohd Alwish Gouri, Deepak Jarewal, Himanshu gurjar, Vikas Garhwal, Samarth Inani, Rudra Purohit, Radheshyam verma, Rambalwan meena, Jayantilal ninama, Krishan Kumar, Uday Kumar, Gaurav Sharma, Deepanshi Purohit, Saijal tak, bhawana shekhawat, Meenal Verma, Sheeti Agrawal, Yogita Meena, riddhima jangid, Anushka Khandelwal, Suryansh Meena, Priya Malinda, Harsh sharma, Amit Sharma, Utkarsh shukla, Aarya Sharma, Nitesh Pradhan, Satish choudhary, Dharmendra jangid, Raj Goswami, Tarun dhakad, Arti yadav, Lavanya Rajan, Nikita verma, Gunjan agarwal, Mudita Mehra, Tushar sen, Aadil khan, Hariom verma, Saurabh Kumar Meena, Pooja meena, Jitendra Dangi, Shiv Bishnoi, Pawan Kumar, Suhani Tiwari, Meghna Gursahaney, Arpita Choudhary, Aditya veer gurjar, Aamna gouri, Daksh sharma, Manish nainiwal, Ajay verma, Irfan khan, Pradeep kumar dhakar, Anurag indauiya, Vedant khajja, Prakash kumar, Atharv patidar, Akshat gupta, Dinesh verma, Mahaveer meena, Harshita yadav, Manasvi dungarwal, Harshvi meena, Shivani mehra, Tanisha choudhary, Neelam choudhary, Payal choudhary, Bittu bansal, Bhavishka prajapati, Saniya khan, Dhapu choudhary</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
-                <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Hydra Havocs Logo">
-                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Hydra Havocs</h3>
-                     </div>
-                </div>
-                <div class="p-6 flex-grow bg-slate-50">
-                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
-                        <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
-                            <li class="font-bold text-blue-700 border-b border-blue-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Ritik Labana</li>
-                           <li>Ritik Labana, Harshit Agarwal, Lakshya Goyal, Uday Maheshwari, Vaibhav Singh, Shreyansh Mundhra, Pramod Devasi, Chirag Garg, Naman Paharia, Vansh Vamaniya, Kuldeep Jonwal, Bharat Suthar, Manish Yadav, Kapil Jat, Vatsal Nama, Vikram Saini, Aaryan Vashishtha, Pankaj Gurjar, Prince Bhaskar, Vasu Somani, MD. Arib, Abhishek Tailor, Naman Khandelwal, Deepak Meena, Rohit Samoliya, Rohit Kumar, Abhay Singh, Bhumika Maheshwari, Kanishka Sharma, Anagha Parashar, Sukhveer Kaur, Pooja Chaudhary, Anisha Rahman, Ishita Rathod, Nikita Bijania, Shreya Shenoy, Aditi Mandusia, Ruchika Kumawat, Hardika Jain, Pooja Chaudhary, Priyal Paliwal, Nidhi Damor, Suruchi Sharma, Keerti Yadav, Gungun Yadav, Kumari HImanshi, Naresh Kumar, Shiv Jinjwadia, Vinod Chaudhary, Waqar Ahmed, Adit Gupta, Akshit chanwada, Deepak dewasi, Yash Kumar Choubey, Sanjay Pancholi, Rahul, Aarav Porwal, Sanjay Chauhan, Piyush, Mohammad Farhan Raza, Kishor Yadav, Maninder Verma, Pulkit Jhalani, Parth Mahaver, Mahesh Meena, Kuldeep Bairwa, Vaibhav, Aman Ansari, Aditya Jindal, Khushbu Kanwar, Vanshika Lalwani, Shreenidhi, Gunjan Pancholi, Gauri Varshney, Jahnavi, Jaahnvi Singh, Taniya Bhardwaj, Sakshi Sharma, Hemlata Dhakar, Gauri Jeengar, Vanshika Garg</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
-                <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Kraken Knights Logo">
-                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                         <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Kraken Knights</h3>
-                     </div>
-                </div>
-                <div class="p-6 flex-grow bg-slate-50">
-                    <div class="h-96 overflow-y-auto pr-2 custom-scrollbar bg-white p-4 rounded-lg border border-slate-100 shadow-inner">
-                        <ul class="text-sm space-y-2 text-slate-700 leading-relaxed">
-                            <li class="font-bold text-purple-700 border-b border-purple-200 pb-2 mb-3 sticky top-0 bg-white">Captain: Garvit Sharma</li>
-                           <li>Garvit Sharma, Ajay Nagar, Vikas Yadav, Aditya Mandusia, Aman Ansari, Aras Khan, Manoj Kumar, Adityaman Singh, Md. Akram, Devansh Singh, Himanshu Meena, Akshay Sankhla, Deepak Devasi, Deepak Jingonia, Vivek Meena, Pradyuman Singh, Bhanwar Singh, Aashish Ninama, Aaryan Sharma, Praveen Jani, Harshit Gupta, Neeraj Meena, Sameer Tak, Rahul Chittora, Naved Qureshi, Alwish Gauri, Garvit Verma, Nirmal Mali, Bharat Patel, Nousheen Khan, Khushi Rajbhanawat, Himanshi Meena, Suman Dhakad, Arshin, Komal Rathore, Pratyusha Singh, Padma Bishnoi, Mehvish Bano, Tanya Sharma, Priyanka Gothwal, Gunjan Saini, Sneha Mittal, Yukta Dantla, Jahnavi Jain, Kirti Mathur, Sonia, Priyanka Lalawat, Ishika Sharma, Shivanshu Upadhyay, Kishore Kumar, Yash Tambia, Naveen Kumar Sharma, Chetan Yadav, Anuj Puri, Nitul Choudhary, Lakshit Samariya, Krishna Gautam, Abhijeet Mina, Suresh Saini, Jaykaran Godara, Mohd Sameer Tak, Suresh Choudhary, Kismat Prajapat, Pratyaksh Jangid, Keshav Dodwariya, Promod Dewasi, Arshin Bahamni, Mohd Akram Silawat, Ashish Ninama, Himanshu Basethia, Tanya Sharma, Mokshaa, Girija Saini, Harshita Morwal, Kanishka, Vindhya Kabra, Muskan Saini, Anushka Shekhawat, Rigveda Jangid, Rajshree Meena, Cheshta Jagenia, Muskan Yadav, Nupur Choudhary</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <!-- Memories & Highlights Gallery -->
@@ -633,6 +663,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-brand-900 text-white py-8 text-center text-sm border-t-4 border-brand-gold mt-auto">
         <p>&copy; 2026 BMSA GMC Bundi. All Rights Reserved.</p>
     </footer>
