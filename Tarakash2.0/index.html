@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarakash 2.0 - Annual Festival | BMSA</title>
+    <title>Tarakash 2.0 Festival - BMSA GMC Bundi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script>
@@ -11,7 +11,7 @@
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] },
-                    colors: { brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#003366', gold: '#FFC107' } },
+                    colors: { brand: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#003366', gold: '#FFC107' } },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                     },
@@ -26,16 +26,16 @@
         }
     </script>
     <style>
-        .team-card:hover { transform: translateY(-5px); }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px -10px rgba(0,0,0,0.1); }
+        .gallery-img:hover { transform: scale(1.03); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
-    <!-- Header -->
     <header class="bg-brand-900 text-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
@@ -45,41 +45,419 @@
                     <p class="text-xs text-brand-100">GMC Bundi</p>
                 </div>
             </div>
-            <a href="index.html" class="px-4 py-2 bg-brand-700 hover:bg-brand-600 rounded text-sm font-medium transition flex items-center shadow">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Back to Home
-            </a>
+            <div class="flex gap-4">
+                <a href="https://gmcbundi.dpdns.org/tarakash/" class="hidden sm:flex px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded text-sm font-medium transition items-center border border-slate-600">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Tarakash 1.0 (Archive)
+                </a>
+                <a href="https://gmcbundi.dpdns.org/AssociatedFunctions/" class="px-4 py-2 bg-brand-700 hover:bg-brand-600 rounded text-sm font-medium transition flex items-center shadow-sm">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back to Functions
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <div class="relative bg-slate-900 py-20 overflow-hidden">
-        <div class="absolute inset-0 opacity-30 bg-[url('https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/IMG-20260201-WA0039.jpg')] bg-cover bg-center"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-900/90 to-brand-900/70"></div>
+    <div class="relative bg-slate-900 py-24 overflow-hidden mb-12">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-900/90 via-slate-900/80 to-brand-900/90"></div>
         <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
             <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-xs font-bold uppercase tracking-widest mb-4 animate-fade-in-up">Annual Festival</span>
             <h1 class="text-5xl md:text-7xl font-serif font-black text-white mb-6 drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">TARAKASH 2.0</h1>
             <p class="text-lg md:text-xl text-brand-100 max-w-2xl mx-auto font-light animate-fade-in-up" style="animation-delay: 0.2s;">
                 Unleashing the spirit of competition, creativity, and camaraderie. Witness the battle of the houses!
             </p>
-            <div class="mt-8 animate-fade-in-up" style="animation-delay: 0.3s;">
-                <a href="#gallery" class="inline-block bg-brand-gold text-brand-900 font-bold py-2 px-6 rounded-full shadow hover:bg-yellow-400 transition">View Gallery</a>
-            </div>
         </div>
     </div>
 
-    <!-- Teams Grid -->
     <main class="max-w-7xl mx-auto px-4 py-16 flex-grow w-full">
+        
+        <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12 mb-20">
+            <div class="text-center mb-10">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-widest mb-3 border border-brand-100">Hall of Fame</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900">Sports Tournament Winners 2026</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="border-4 border-black mb-12 overflow-hidden text-sm bg-white font-sans shadow-sm">
+                <div class="flex flex-col md:flex-row items-center border-b-4 border-black p-4">
+                    <div class="w-24 md:w-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                        <img src="https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png" alt="BMSA Logo" class="w-full object-contain">
+                    </div>
+                    <div class="flex-grow text-center md:text-center">
+                        <h1 class="text-2xl md:text-4xl font-black text-black tracking-tight mb-1">Bundi Medical Students Association</h1>
+                        <p class="text-lg md:text-xl font-serif italic text-black mb-1">A Voice For Medical Excellence</p>
+                        <p class="text-sm md:text-base text-slate-800">Students Conduction body of GMC Bundi</p>
+                        <p class="text-sm md:text-base text-slate-800">Gmail : bmsa.gmcbundi@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 divide-y-4 md:divide-y-0 md:divide-x-4 divide-black border-b-4 border-black bg-white text-center py-3">
+                    <div class="py-1">
+                        <p class="font-bold text-black text-base">Vinit Choudhary</p>
+                        <p class="text-xs text-slate-600">President</p>
+                    </div>
+                    <div class="py-1">
+                        <p class="font-bold text-black text-base">Utkarsh Shukla</p>
+                        <p class="text-xs text-slate-600">Vice President</p>
+                    </div>
+                    <div class="py-1">
+                        <p class="font-bold text-black text-base">Manish Kumar Meena</p>
+                        <p class="text-xs text-slate-600">General Secretary</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-black bg-white">
+                    <div class="lg:w-1/6 flex items-center justify-center p-4 font-bold text-lg text-center">
+                        Sports<br>Committee
+                    </div>
+                    <div class="lg:w-5/6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 gap-x-2 p-3 text-center items-start">
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Ritik Labana</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Secretary</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Abhishek Ajmera</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Secretary</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Divya Sharma</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Secretary<br>(Girls Sports Incharge)</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Aryan Vasishta</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Joint Secretary</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Prince Bhaskar</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Joint Secretary</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Riddhima Jangid</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Joint Secretary</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Anushka Shekhawat</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Batch Head</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Nitual Choudhary</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Batch Head</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Shreenidhi Khandelwal</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Batch Head</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-black text-xs sm:text-sm">Shivang</p>
+                            <p class="text-[10px] text-slate-600 leading-tight mt-0.5">Batch Head</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+                
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-brand-900 border-l-4 border-brand-gold pl-3 flex items-center">
+                        <span class="bg-brand-50 text-brand-700 p-2 rounded-lg mr-3 shadow-sm">🏟️</span> Outdoor Games
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                            <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏏 Cricket (Boys)</h4></div>
+                            <div class="p-5 space-y-3">
+                                <div class="flex justify-between items-center text-sm border-b border-slate-200 pb-2"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-blue-700">Hydra Havocs</span></div>
+                                <div class="flex justify-between items-center text-sm"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-green-700">Godzilla Guardians</span></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                            <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏐 Volleyball</h4></div>
+                            <div class="p-5 space-y-3">
+                                <div class="flex justify-between items-center text-sm border-b border-slate-200 pb-2"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-slate-800">Teachers</span></div>
+                                <div class="flex justify-between items-center text-sm"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-red-700">Flaming Falcons</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                        <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏃 Kho-Kho</h4></div>
+                        <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="border-l-2 border-brand-200 pl-3">
+                                <h6 class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-3">Boys Match</h6>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center text-sm bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-blue-700">Hydra Havocs</span></div>
+                                    <div class="flex justify-between items-center text-sm bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-green-700">Godzilla Guardians</span></div>
+                                    <div class="flex flex-col text-sm mt-1 pt-1 border-t border-slate-200"><span class="font-medium text-slate-600 text-[10px] uppercase mb-0.5">⭐ Best Player</span> <span class="font-bold text-slate-800">Abhishek Tailor</span></div>
+                                </div>
+                            </div>
+                            <div class="border-l-2 border-pink-200 pl-3">
+                                <h6 class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-3">Girls Match</h6>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center text-sm bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-blue-700">Hydra Havocs</span></div>
+                                    <div class="flex justify-between items-center text-sm bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-red-700">Flaming Falcons</span></div>
+                                    <div class="flex flex-col text-sm mt-1 pt-1 border-t border-slate-200"><span class="font-medium text-slate-600 text-[10px] uppercase mb-0.5">⭐ Best Player</span> <span class="font-bold text-slate-800">Priyanka Yadav</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                        <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏅 Athletics (Races)</h4></div>
+                        <div class="p-5 space-y-6">
+                            
+                            <div>
+                                <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">100m Sprint</h5>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <ul class="text-sm space-y-1.5 border-l-2 border-brand-200 pl-3">
+                                        <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Sanjay Pancholi</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Durgesh Dangi</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Abhishek Tailor</span></li>
+                                    </ul>
+                                    <ul class="text-sm space-y-1.5 border-l-2 border-pink-200 pl-3">
+                                        <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Gunjan Pancholi</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Shreenidhi K.</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Pratyusha Singh</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                                <div>
+                                    <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">200m Sprint</h5>
+                                    <ul class="text-sm space-y-1.5 border-l-2 border-brand-200 pl-3 mb-4">
+                                        <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Sanjay Pancholi</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Harsh Sharma</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Rohit Singhal</span></li>
+                                    </ul>
+                                    <ul class="text-sm space-y-1.5 border-l-2 border-pink-200 pl-3">
+                                        <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Neelam Chaudhary</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Khushbu Kanwar</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Mansavi Dungarwal</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">400m Sprint</h5>
+                                    <ul class="text-sm space-y-1.5 border-l-2 border-brand-200 pl-3 mb-4">
+                                        <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Himanshu Gurjar</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Abhishek Tailor</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Durgesh Dangi</span></li>
+                                    </ul>
+                                    <ul class="text-sm space-y-1.5 border-l-2 border-pink-200 pl-3">
+                                        <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Harshita Yadav</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Girija Saini</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Khushbu Kanwar</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 border-t border-slate-200 mt-2">
+                                <h5 class="font-bold text-slate-700 mt-4 mb-3">Relay Race</h5>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="border-l-2 border-brand-200 pl-3">
+                                        <h6 class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Teams</h6>
+                                        <ul class="text-sm space-y-2">
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-blue-700 text-right">Hydra Havocs</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-green-700 text-right">Godzilla Guardians</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-purple-700 text-right">Kraken Knights</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="border-l-2 border-pink-200 pl-3">
+                                        <h6 class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Teams</h6>
+                                        <ul class="text-sm space-y-2">
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-blue-700 text-right">Hydra Havocs</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-purple-700 text-right">Kraken Knights</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-red-700 text-right">Flaming Falcons</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-brand-900 border-l-4 border-brand-gold pl-3 flex items-center">
+                        <span class="bg-brand-50 text-brand-700 p-2 rounded-lg mr-3 shadow-sm">🏠</span> Indoor Games
+                    </h3>
+
+                    <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                        <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏸 Badminton</h4></div>
+                        <div class="p-5 space-y-6">
+                            <div>
+                                <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Single Player Match</h5>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <ul class="text-sm space-y-2 border-l-2 border-brand-200 pl-3">
+                                        <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Vasu Somani</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Rohit Singhal</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Gargit Jorwal</span></li>
+                                    </ul>
+                                    <ul class="text-sm space-y-2 border-l-2 border-pink-200 pl-3">
+                                        <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Harshita Yadav</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Tanya Sharma</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Shreya Shenoy</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Double Player Match</h5>
+                                <div class="space-y-4">
+                                    <div class="border-l-2 border-brand-200 pl-3">
+                                        <h6 class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</h6>
+                                        <ul class="text-sm space-y-2">
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥇 1st (Gold)</span> <span class="font-bold text-right text-slate-800">Harsh Sharma & Suryansh M.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥈 2nd (Silver)</span> <span class="font-bold text-right text-slate-800">Aryan Vashishtha & Rohit</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥉 3rd (Bronze)</span> <span class="font-bold text-right text-slate-800">Garvit Sharma & Devansh S.</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="border-l-2 border-pink-200 pl-3 mt-4">
+                                        <h6 class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</h6>
+                                        <ul class="text-sm space-y-2">
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥇 1st (Gold)</span> <span class="font-bold text-right text-slate-800">Divya Sharma & Pooja C.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥈 2nd (Silver)</span> <span class="font-bold text-right text-slate-800">Khushbu K. & Taniya B.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥉 3rd (Bronze)</span> <span class="font-bold text-right text-slate-800">Manasvi D. & Yogita M.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                        <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🏓 Table Tennis</h4></div>
+                        <div class="p-5 space-y-6">
+                            <div>
+                                <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Single Player Match</h5>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <ul class="text-sm space-y-2 border-l-2 border-brand-200 pl-3">
+                                        <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Garvit Sharma</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Aryan Vashishtha</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Naman Khandelwal</span></li>
+                                    </ul>
+                                    <ul class="text-sm space-y-2 border-l-2 border-pink-200 pl-3">
+                                        <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Vanshika Lalwani</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Divya Sharma</span></li>
+                                        <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Riddhima Jangid</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Double Player Match</h5>
+                                <div class="space-y-4">
+                                    <div class="border-l-2 border-brand-200 pl-3">
+                                        <h6 class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</h6>
+                                        <ul class="text-sm space-y-2">
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥇 1st (Gold)</span> <span class="font-bold text-right text-slate-800">Himanshu Gurjar & Daksh S.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥈 2nd (Silver)</span> <span class="font-bold text-right text-slate-800">Uday Maheshwari & Abhishek T.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥉 3rd (Bronze)</span> <span class="font-bold text-right text-slate-800">Krishan Sharma & Kavya L.</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="border-l-2 border-pink-200 pl-3 mt-4">
+                                        <h6 class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</h6>
+                                        <ul class="text-sm space-y-2">
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥇 1st (Gold)</span> <span class="font-bold text-right text-slate-800">Yogita M. & Anushka K.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥈 2nd (Silver)</span> <span class="font-bold text-right text-slate-800">Komal Rathore & Pratyusha S.</span></li>
+                                            <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥉 3rd (Bronze)</span> <span class="font-bold text-right text-slate-800">Hitisha Khinchi & Ailicia</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                            <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">♟️ Chess</h4></div>
+                            <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="text-sm space-y-2 border-l-2 border-brand-200 pl-3">
+                                    <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                    <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Abhay Singh</span></li>
+                                    <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Shivanshu Upadhayay</span></li>
+                                    <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Saksham Mirdha</span></li>
+                                </ul>
+                                <ul class="text-sm space-y-2 border-l-2 border-pink-200 pl-3">
+                                    <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                    <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Divya Sharma</span></li>
+                                    <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Meghna Gursahaney</span></li>
+                                    <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Gauri Jeengar</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+                            <div class="bg-white p-4 border-b border-slate-100"><h4 class="font-bold text-lg text-slate-800">🎯 Carrom</h4></div>
+                            <div class="p-5 space-y-6">
+                                <div>
+                                    <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Single Player Match</h5>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <ul class="text-sm space-y-2 border-l-2 border-brand-200 pl-3">
+                                            <li class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</li>
+                                            <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Tushar Sen</span></li>
+                                            <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Ritik Labana</span></li>
+                                            <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Aman Ansari</span></li>
+                                        </ul>
+                                        <ul class="text-sm space-y-2 border-l-2 border-pink-200 pl-3">
+                                            <li class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</li>
+                                            <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥇 1st (Gold)</span> <span class="font-bold text-right">Mokshaa</span></li>
+                                            <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥈 2nd (Silver)</span> <span class="font-bold text-right">Chestha</span></li>
+                                            <li class="flex justify-between items-center"><span class="font-medium text-slate-600 text-xs">🥉 3rd (Bronze)</span> <span class="font-bold text-right">Khushi Tikania</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-bold text-slate-700 mb-3 pb-1 border-b border-slate-200">Double Player Match</h5>
+                                    <div class="space-y-4">
+                                        <div class="border-l-2 border-brand-200 pl-3">
+                                            <h6 class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-2">Boys Match</h6>
+                                            <ul class="text-sm space-y-2">
+                                                <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥇 1st (Gold)</span> <span class="font-bold text-right text-slate-800">Ajay Verma & Pradeep D.</span></li>
+                                                <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥈 2nd (Silver)</span> <span class="font-bold text-right text-slate-800">Uday Maheshwari & Lakshya G.</span></li>
+                                                <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥉 3rd (Bronze)</span> <span class="font-bold text-right text-slate-800">Tarun Kumar D. & Gaurav S.</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="border-l-2 border-pink-200 pl-3 mt-4">
+                                            <h6 class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">Girls Match</h6>
+                                            <ul class="text-sm space-y-2">
+                                                <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥇 1st (Gold)</span> <span class="font-bold text-right text-slate-800">Pratyusha Singh & Komal R.</span></li>
+                                                <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥈 2nd (Silver)</span> <span class="font-bold text-right text-slate-800">Vanshika Garg & Priyal P.</span></li>
+                                                <li class="flex justify-between items-center bg-white p-2 rounded border border-slate-100"><span class="font-medium text-slate-600 text-xs mr-2">🥉 3rd (Bronze)</span> <span class="font-bold text-right text-slate-800">Jhanvi Jain & Sneha Mittal</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-brand-900 inline-block border-b-4 border-brand-gold pb-1">The 4 Houses (2026)</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             
-            <!-- 1. Flaming Falcons -->
             <div class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
                 <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM.jpeg" class="h-full w-full object-contain" alt="Flaming Falcons Logo">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM.jpeg" class="h-full w-full object-contain" alt="Flaming Falcons Logo">
                      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                          <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Flaming Falcons</h3>
                      </div>
@@ -94,10 +472,9 @@
                 </div>
             </div>
 
-            <!-- 2. Godzilla Guardians -->
             <div class="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
                 <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Godzilla Guardians Logo">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Godzilla Guardians Logo">
                      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                          <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Godzilla Guardians</h3>
                      </div>
@@ -112,10 +489,9 @@
                 </div>
             </div>
 
-            <!-- 3. Hydra Havocs -->
             <div class="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
                 <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Hydra Havocs Logo">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.04%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Hydra Havocs Logo">
                      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                          <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Hydra Havocs</h3>
                      </div>
@@ -130,10 +506,9 @@
                 </div>
             </div>
 
-            <!-- 4. Kraken Knights -->
             <div class="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden team-card transition-all duration-300 flex flex-col">
                 <div class="relative h-64 w-full bg-black">
-                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM.jpeg" class="h-full w-full object-contain" alt="Kraken Knights Logo">
+                     <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/main/Tarakash/WhatsApp%20Image%202026-02-03%20at%203.18.05%20PM%20(1).jpeg" class="h-full w-full object-contain" alt="Kraken Knights Logo">
                      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                          <h3 class="text-2xl font-bold text-white text-center uppercase tracking-wide drop-shadow-md">Kraken Knights</h3>
                      </div>
@@ -150,121 +525,127 @@
 
         </div>
 
-        <!-- Event Gallery Section -->
-        <section class="mt-20 pt-16 border-t border-slate-200" id="gallery">
+        <!-- Memories & Highlights Gallery -->
+        <section id="gallery" class="pt-20 w-full">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-900 inline-block border-b-4 border-brand-gold pb-1">Event Gallery</h2>
-            </div>
-            
-            <div class="text-center mb-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-                 <a href="https://www.instagram.com/taraksh.gmcbundi/?hl=en" target="_blank" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Visit Tarakash Instagram
-                </a>
-                
-                <!-- Download Media Button -->
-                <a href="https://photos.app.goo.gl/bziNiaqiPvZCBK9X9" target="_blank" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    Download Photos & Videos
-                </a>
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-widest mb-3 border border-brand-100">Gallery</span>
+                <h2 class="text-3xl font-bold text-brand-900 inline-block border-b-4 border-brand-gold pb-1">Memories & Highlights</h2>
             </div>
 
-            <!-- Badminton Gallery -->
-            <div class="mb-8">
-                <h3 class="text-2xl font-bold text-brand-800 mb-6 border-l-4 border-brand-gold pl-3">Badminton</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="h-64 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group relative">
-                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash2.0/20260222_145656.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Badminton Event" onclick="openLightbox(this.src)">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
-                    </div>
-                    <div class="h-64 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group relative">
-                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash2.0/20260222_162508.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Badminton Event" onclick="openLightbox(this.src)">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
-                    </div>
-                    <div class="h-64 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group relative">
-                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash2.0/20260222_162508.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Badminton Event" onclick="openLightbox(this.src)">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
-                    </div>
-                    <div class="h-64 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group relative">
-                        <img src="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/Tarakash2.0/20260222_162607.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Badminton Event" onclick="openLightbox(this.src)">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_2559%409859231.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3168%4010222654.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3430%4010767729.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4106%4013316303.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4674%4013176900.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4686%4011749765.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5480%4012303326.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5730%4010978148.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5744%4012545552.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6053%4010426859.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6090%4011116254.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6889%4013688280.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6902%4012713136.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7086%4011104591.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1054.jpg" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
+                </div>
+                <div class="h-64 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group relative bg-slate-200">
+                    <img src="https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg" class="w-full h-full object-cover gallery-img transition-transform duration-500" alt="Tarakash 2.0 Memory" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none"></div>
                 </div>
             </div>
         </section>
-
     </main>
 
+    <footer class="bg-brand-900 text-white py-8 text-center text-sm border-t-4 border-brand-gold mt-auto">
+        <p>&copy; 2026 BMSA GMC Bundi. All Rights Reserved.</p>
+    </footer>
+
     <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[120] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
         <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
-        <button class="absolute top-4 right-4 text-white hover:text-brand-gold focus:outline-none z-[130]" onclick="closeLightbox()">
+        <button class="absolute top-4 right-4 text-white hover:text-brand-gold focus:outline-none z-[70]" onclick="closeLightbox()">
             <svg class="w-10 h-10 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
     </div>
 
-    <!-- Background Music & Control -->
-    <audio id="bg-music" loop preload="auto">
-        <source src="https://github.com/kanishk2007dev/gmcbundi-main-website/raw/refs/heads/main/Tarakash2.0/ALUCINANTE%20SPACE%20s%20l%20wd.mp3" type="audio/mpeg">
-    </audio>
-
-    <button id="music-toggle" class="fixed bottom-6 right-6 z-[100] bg-brand-900 text-white p-3.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:bg-brand-800 transition-all transform hover:scale-110 flex items-center justify-center border-2 border-brand-gold" title="Toggle Music">
-        <svg id="music-icon-play" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <svg id="music-icon-pause" class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    </button>
-
     <script>
-        const bgMusic = document.getElementById('bg-music');
-        const musicToggle = document.getElementById('music-toggle');
-        const iconPlay = document.getElementById('music-icon-play');
-        const iconPause = document.getElementById('music-icon-pause');
-        
-        let isPlaying = false;
-        
-        function toggleMusic(e) {
-            if (e) e.stopPropagation();
-            if (isPlaying) {
-                bgMusic.pause();
-                iconPause.classList.add('hidden');
-                iconPlay.classList.remove('hidden');
-            } else {
-                bgMusic.play();
-                iconPlay.classList.add('hidden');
-                iconPause.classList.remove('hidden');
-            }
-            isPlaying = !isPlaying;
-        }
-
-        musicToggle.addEventListener('click', toggleMusic);
-
-        window.addEventListener('DOMContentLoaded', () => {
-            // Set volume to a pleasant level
-            bgMusic.volume = 0.6;
-            
-            // Attempt to autoplay
-            bgMusic.play().then(() => {
-                isPlaying = true;
-                iconPlay.classList.add('hidden');
-                iconPause.classList.remove('hidden');
-            }).catch(err => {
-                // Autoplay blocked by browser. Wait for any user interaction on the body.
-                isPlaying = false;
-                iconPause.classList.add('hidden');
-                iconPlay.classList.remove('hidden');
-                
-                document.body.addEventListener('click', function startMusicOnInteract() {
-                    if(!isPlaying){
-                        bgMusic.play();
-                        isPlaying = true;
-                        iconPlay.classList.add('hidden');
-                        iconPause.classList.remove('hidden');
-                    }
-                    document.body.removeEventListener('click', startMusicOnInteract);
-                }, { once: true });
-            });
-        });
-
-        // Lightbox Functions
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
@@ -272,6 +653,7 @@
             lightbox.classList.remove('hidden');
             setTimeout(() => {
                 lightbox.classList.remove('opacity-0');
+                lightbox.classList.add('flex');
                 img.classList.remove('scale-95');
                 img.classList.add('scale-100');
             }, 10);
@@ -285,17 +667,10 @@
             img.classList.add('scale-95');
             setTimeout(() => {
                 lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
                 img.src = '';
             }, 300);
         }
     </script>
-
-    <!-- Footer -->
-    <footer class="bg-brand-900 text-white py-8 text-center text-sm border-t-4 border-brand-gold mt-auto relative z-10">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2026 BMSA GMC Bundi. All Rights Reserved.</p>
-        </div>
-    </footer>
-
 </body>
 </html>
