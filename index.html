@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bundi Medical Student Association of Government Medical College Bundi</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/file_000000003f1c720792a6d2acb3624341%20(1).ico">
 
+    <!-- Network Preconnects for Speed -->
+    <link rel="preconnect" href="https://wsrv.nl" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Preload Critical Images -->
     <link rel="preload" as="image" href="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/GMC-n-hssj/main/file_000000003f1c720792a6d2acb3624341%20(1).png&output=webp&w=400">
-    <link rel="preload" as="image" href="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/DSC_5108%4013477244.JPG&output=webp&w=1200">
+    <link rel="preload" as="image" href="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/WhatsApp%20Image%202026-04-03%20at%2010.03.39%20PM.jpeg&output=webp&w=1200">
 
     <link rel="canonical" href="https://gmcbundi.dpdns.org/">
 
@@ -48,15 +54,15 @@
                         }
                     },
                     animation: {
-                        'scroll-up': 'scrollUp 120s linear infinite', /* Slowed down to accommodate many notices */
+                        'scroll-up': 'scrollUp 20s linear infinite', /* Increased speed for the seamless loop */
                         'fade-in': 'fadeIn 1s ease-in-out',
                         'tilt': 'tilt 10s infinite linear',
                         'shine': 'shine 1.5s infinite',
                     },
                     keyframes: {
                         scrollUp: {
-                            '0%': { transform: 'translateY(100%)' },
-                            '100%': { transform: 'translateY(-100%)' },
+                            '0%': { transform: 'translateY(0)' },
+                            '100%': { transform: 'translateY(-50%)' }, /* Scrolls exactly half the height of the duplicated content */
                         },
                         fadeIn: {
                             '0%': { opacity: '0' },
@@ -315,26 +321,20 @@
     <div class="relative bg-slate-900" id="home">
         <!-- Slider Images -->
         <div class="slider-container" id="heroSlider">
-            <!-- Slide 1 -->
-            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/DSC_5108%4013477244.JPG&output=webp&w=1200');"></div>
-            <!-- Slide 2 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg&output=webp&w=1200');"></div>
-            <!-- Slide 3 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg&output=webp&w=1200');"></div>
-            <!-- Slide 4 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg&output=webp&w=1200');"></div>
-            <!-- Slide 5 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG&output=webp&w=1200');"></div>
-            <!-- Slide 6 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG&output=webp&w=1200');"></div>
-            <!-- Slide 7 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG&output=webp&w=1200');"></div>
-            <!-- Slide 8 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG&output=webp&w=1200');"></div>
-            <!-- Slide 9 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG&output=webp&w=1200');"></div>
-            <!-- Slide 10 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG&output=webp&w=1200');"></div>
+            <!-- Slide 1 (Loaded Immediately) -->
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/WhatsApp%20Image%202026-04-03%20at%2010.03.39%20PM.jpeg&output=webp&w=1200');"></div>
+            
+            <!-- Slides 2-11 (Deferred Loading for Performance) -->
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmcbundi-main-website/refs/heads/main/DSC_5108%4013477244.JPG&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG&output=webp&w=1200')"></div>
+            <div class="slide" data-bg="url('https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG&output=webp&w=1200')"></div>
         </div>
 
         <!-- Floating Info Overlay -->
@@ -643,134 +643,6 @@
                         <p class="text-slate-600 font-medium" data-key="schedules_empty">Detailed schedule for Tarakash 2.0 will be released shortly.</p>
                     </div>
                 </div>
-
-                <!-- Student Corner & Tarakash Gallery (Updated Layout) -->
-                <div id="student-corner" class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 mt-8">
-                    <!-- Main Header -->
-                    <div class="mb-6">
-                        <h2 class="text-2xl font-bold text-brand-900 border-l-4 border-brand-600 pl-3" data-key="student_corner_title">Student Corner</h2>
-                    </div>
-                    
-                    <!-- Tarakash Sub-Header & Button -->
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
-                        <h3 class="text-xl font-bold text-brand-800 border-l-4 border-brand-600 pl-3" data-key="tarakash_title">Tarakash 2.0 Gallery Highlights</h3>
-                        
-                        <a href="https://www.instagram.com/taraksh.gmcbundi/?hl=en" target="_blank" class="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-bold hover:bg-pink-200 transition shadow-sm border border-pink-200">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            Festival Instagram
-                        </a>
-                    </div>
-
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <!-- Image Batch 1 -->
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_2559%409859231.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_2559%409859231.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3168%4010222654.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3168%4010222654.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3430%4010767729.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3430%4010767729.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        
-                        <!-- Image Batch 2 -->
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4106%4013316303.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4106%4013316303.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4674%4013176900.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4674%4013176900.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4686%4011749765.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4686%4011749765.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-
-                        <!-- Image Batch 3 -->
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5480%4012303326.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5480%4012303326.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5730%4010978148.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5730%4010978148.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5744%4012545552.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5744%4012545552.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-
-                        <!-- Image Batch 4 -->
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6053%4010426859.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6053%4010426859.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6090%4011116254.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6090%4011116254.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-
-                        <!-- Image Batch 5 -->
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6889%4013688280.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6889%4013688280.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6902%4012713136.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6902%4012713136.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7086%4011104591.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7086%4011104591.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-
-                        <!-- Image Batch 6 -->
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1054.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1054.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
-                            <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Right Sidebar (Notice Board) -->
@@ -785,28 +657,30 @@
                         <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded animate-pulse" data-key="notice_new">New</span>
                     </div>
                     <div class="h-[450px] overflow-hidden relative">
-                        <div class="p-4 space-y-3 animate-scroll-up notice-board-scroll">
-                            
-                            <!-- DC Members Notice -->
-                            <a href="https://gmcbundi.dpdns.org/DC%20member.pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-brand-600">
-                                <span class="text-xs text-brand-600 font-bold font-mono uppercase">18 Feb 2026</span>
-                                <p class="text-sm font-bold text-slate-800 group-hover:text-brand-700 mt-1">Announcement of Disciplinary Committee (DC) Members</p>
-                                <span class="text-xs text-brand-500 mt-2 block flex items-center">
-                                    <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                    Download PDF
-                                </span>
-                            </a>
+                        <div class="animate-scroll-up notice-board-scroll flex flex-col">
+                            <div class="p-4 space-y-3" id="notice-content">
+                                
+                                <!-- DC Members Notice -->
+                                <a href="https://gmcbundi.dpdns.org/DC%20member.pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-brand-600">
+                                    <span class="text-xs text-brand-600 font-bold font-mono uppercase">18 Feb 2026</span>
+                                    <p class="text-sm font-bold text-slate-800 group-hover:text-brand-700 mt-1">Announcement of Disciplinary Committee (DC) Members</p>
+                                    <span class="text-xs text-brand-500 mt-2 block flex items-center">
+                                        <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                        Download PDF
+                                    </span>
+                                </a>
 
-                            <!-- Karyalaya Adesh -->
-                            <a href="https://gmcbundi.dpdns.org/%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF,%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%95%E0%A5%80%E0%A4%AF%20%E0%A4%86%E0%A4%AF%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF,%20%E0%A4%AC%E0%A5%82%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80%20(%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8).pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-brand-600">
-                                <span class="text-xs text-brand-600 font-bold font-mono uppercase">Notice</span>
-                                <p class="text-sm font-hindi font-bold text-slate-800 group-hover:text-brand-700 mt-1">कार्यालय आदेश - प्रधानाचार्य कार्यालय</p>
-                                <span class="text-xs text-brand-500 mt-2 block">View Document</span>
-                            </a>
+                                <!-- Karyalaya Adesh -->
+                                <a href="https://gmcbundi.dpdns.org/%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF,%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%95%E0%A5%80%E0%A4%AF%20%E0%A4%86%E0%A4%AF%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF,%20%E0%A4%AC%E0%A5%82%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80%20(%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8).pdf" target="_blank" class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 hover:shadow-md transition group border-l-4 border-l-brand-600">
+                                    <span class="text-xs text-brand-600 font-bold font-mono uppercase">Notice</span>
+                                    <p class="text-sm font-hindi font-bold text-slate-800 group-hover:text-brand-700 mt-1">कार्यालय आदेश - प्रधानाचार्य कार्यालय</p>
+                                    <span class="text-xs text-brand-500 mt-2 block">View Document</span>
+                                </a>
 
-                            <div class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 transition group border-l-4 border-l-brand-500">
-                                <span class="text-xs text-brand-600 font-bold font-mono uppercase">Info</span>
-                                <p class="text-sm font-medium text-slate-800 mt-1">Check here for latest notices regarding Tarakash 2.0 activities.</p>
+                                <div class="block p-3 bg-white rounded border border-slate-100 shadow-sm hover:border-brand-400 transition group border-l-4 border-l-brand-500">
+                                    <span class="text-xs text-brand-600 font-bold font-mono uppercase">Info</span>
+                                    <p class="text-sm font-medium text-slate-800 mt-1">Check here for latest notices regarding Tarakash 2.0 activities.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -816,7 +690,7 @@
                 </div>
 
                 <!-- Quick Links Box (Sidebar) -->
-                <div id="sidebar-quick-links" class="bg-brand-900 rounded-lg shadow-md p-6 text-white">
+                <div id="student-corner" class="bg-brand-900 rounded-lg shadow-md p-6 text-white">
                     <h3 class="font-bold text-lg mb-4 border-b border-brand-700 pb-2" data-key="student_corner">Student Corner</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="https://ruhsraj.org.in/Ruhsstudent/index" target="_blank" class="flex items-center hover:text-brand-300 transition border-b border-brand-800 pb-2"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> <span data-key="link_panel">RUHS Student Panel</span></a></li>
@@ -891,6 +765,130 @@
         </div>
     </section>
 
+    <!-- Tarakash 2.0 Gallery Section -->
+    <section id="gallery" class="py-12 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+                <h2 class="text-2xl font-serif font-bold text-brand-900 border-l-4 border-brand-600 pl-3" data-key="tarakash_title">Tarakash 2.0 Gallery Highlights</h2>
+                
+                <a href="https://www.instagram.com/taraksh.gmcbundi/?hl=en" target="_blank" class="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-bold hover:bg-pink-200 transition shadow-sm border border-pink-200">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Festival Instagram
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Image Batch 1 -->
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC00069%409416637.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_2559%409859231.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_2559%409859231.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3168%4010222654.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3168%4010222654.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3430%4010767729.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_3430%4010767729.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                
+                <!-- Image Batch 2 -->
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4106%4013316303.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4106%4013316303.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4674%4013176900.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4674%4013176900.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4686%4011749765.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_4686%4011749765.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5185%4012674030.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Image Batch 3 -->
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5480%4012303326.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5480%4012303326.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5627%4010833863.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5730%4010978148.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5730%4010978148.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5744%4012545552.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_5744%4012545552.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Image Batch 4 -->
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6053%4010426859.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6053%4010426859.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6090%4011116254.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6090%4011116254.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6301%4011392386.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6777%4013175708.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Image Batch 5 -->
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6889%4013688280.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6889%4013688280.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6902%4012713136.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_6902%4012713136.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7086%4011104591.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7086%4011104591.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/DSC_7126%4010925618.JPG&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Image Batch 6 -->
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc103d.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc104a.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1054.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1054.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+                <div class="h-48 overflow-hidden rounded-lg shadow-sm group cursor-pointer relative">
+                    <img src="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg&output=webp&w=400" data-full="https://wsrv.nl/?url=https://raw.githubusercontent.com/kanishk2007dev/gmc-bundi/refs/heads/main/69a7bf0cde49e61fc5dc1064.jpg&output=webp&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image" onclick="openLightbox(this.dataset.full)" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact" class="bg-brand-900 text-white pt-12 pb-6 border-t-4 border-brand-gold">
         <div class="max-w-7xl mx-auto px-4">
@@ -955,6 +953,7 @@
             <div class="border-t border-brand-800 pt-6 text-center text-xs text-brand-400">
                 <p class="mb-2" data-key="copyright">&copy; 2025 Bundi Medical Student Association of Government Medical College Bundi. All Rights Reserved.</p>
                 <p data-key="website_contact">For any changes in this website contact: <a href="mailto:studentsgmcbundi@gmail.com" class="hover:text-white underline transition">studentsgmcbundi@gmail.com</a></p>
+                <p class="mt-3 text-brand-300 font-semibold tracking-wide max-w-2xl mx-auto leading-relaxed" data-key="website_creator">Website created by KANISHK (Media Head 2025) under the guidance of General Secretary</p>
             </div>
         </div>
     </footer>
@@ -1084,7 +1083,7 @@
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
-        <img id="lightbox-img" class="max-w-full max-h-full object-contain rounded shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="data:," alt="Fullscreen Gallery Image" class="max-w-full max-h-full object-contain rounded shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
         <button class="absolute top-4 right-4 text-white hover:text-brand-gold focus:outline-none z-[70]" onclick="closeLightbox()">
             <svg class="w-10 h-10 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
@@ -1135,7 +1134,8 @@
                 website_contact: "For any changes in this website contact: <a href='mailto:studentsgmcbundi@gmail.com' class='hover:text-white underline transition'>studentsgmcbundi@gmail.com</a>",
                 link_former_members: "BMSA Former Executive & Committee Members",
                 link_constitution: "BMSA Constitution",
-                link_rules: "Rules"
+                link_rules: "Rules",
+                website_creator: "Website created by KANISHK (Media Head 2025) under the guidance of General Secretary"
             },
             hi: {
                 skip_content: "मुख्य सामग्री पर जाएं",
@@ -1179,7 +1179,8 @@
                 website_contact: "इस वेबसाइट में किसी भी बदलाव के लिए संपर्क करें: <a href='mailto:studentsgmcbundi@gmail.com' class='hover:text-white underline transition'>studentsgmcbundi@gmail.com</a>",
                 link_former_members: "BMSA पूर्व कार्यकारी और समिति सदस्य",
                 link_constitution: "BMSA संविधान",
-                link_rules: "नियम"
+                link_rules: "नियम",
+                website_creator: "वेबसाइट निर्माता: कनिष्क (मीडिया हेड 2025) महासचिव के मार्गदर्शन में"
             }
         };
 
@@ -1203,6 +1204,16 @@
             });
         }
 
+        window.addEventListener('DOMContentLoaded', () => {
+            // Seamless Notice Board Scroll Setup
+            const noticeContent = document.getElementById('notice-content');
+            const noticeScroll = document.querySelector('.notice-board-scroll');
+            if (noticeContent && noticeScroll) {
+                // Clone the notices block to create a seamless infinite loop
+                noticeScroll.appendChild(noticeContent.cloneNode(true));
+            }
+        });
+
         window.addEventListener('load', () => {
             const loader = document.getElementById('page-loader');
             // Drastically reduced timeout for a much faster site entry
@@ -1219,13 +1230,32 @@
             menu.classList.toggle('hidden');
         }
 
-        // Hero Slider Logic
+        // Hero Slider Logic with Lazy Loading
         const slides = document.querySelectorAll('.slide');
         let currentSlide = 0;
+
+        function loadSlideImage(index) {
+            const slide = slides[index];
+            if (slide && slide.dataset.bg) {
+                slide.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), ${slide.dataset.bg}`;
+                slide.removeAttribute('data-bg');
+            }
+        }
+
+        // Preload the second slide shortly after initial page load
+        setTimeout(() => loadSlideImage(1), 2000);
+
         function nextSlide() {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Ensure current slide image is loaded
+            loadSlideImage(currentSlide);
             slides[currentSlide].classList.add('active');
+
+            // Preload the *next* slide in the background so it's ready for the transition
+            let nextIndex = (currentSlide + 1) % slides.length;
+            loadSlideImage(nextIndex);
         }
         setInterval(nextSlide, 4000);
 
